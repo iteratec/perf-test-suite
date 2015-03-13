@@ -1,0 +1,1 @@
+$(window).load(function(){$("[data-src]").each(function(a,b){b=$(b);b.attr("src",b.attr("data-src"))})});

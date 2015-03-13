@@ -48,11 +48,12 @@
 
     <?php
         //include optimization code
-        $beginBodyInclude = $_GET["beginbodyinclude"];
-        if($beginBodyInclude) include_once("optimization_includes/${beginBodyInclude}.inc");
-
+        if(isset($_GET["beginbodyinclude"])){
+            $beginBodyInclude = $_GET["beginbodyinclude"];
+            include_once("optimization_includes/$beginBodyInclude.inc");
+        }
         //simulate server side processing time
-        $sleep = $_GET["sleep"];
+        $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
         if($sleep && $sleep.is_int()){
             sleep($sleep);
         }
@@ -65,18 +66,16 @@
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+					<img src="assets/images/icons/bars.png" />
                 </button>
 
-                <a href="index.html" class="navbar-brand">HTTP2Rulez!</a>
+                <a href="index.php" class="navbar-brand">HTTP2Rulez!</a>
             </div>
 
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
                     <li>
-                        <a class="selected" href="index.html">Home</a>
+                        <a class="selected" href="index.php">Home</a>
                     </li>
                     <li>
                         <a href="web-components.html">Web Components</a>
@@ -126,10 +125,10 @@
                             </div>
                         </div>
                         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <img src="assets/images/icons/chevron-left.png" />
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <img src="assets/images/icons/chevron-right.png" />
                         </a>
                     </div>
                 </div>
@@ -145,9 +144,9 @@
                     </div>
                     <div class="col-sm-9">
                         <p>
-                            <span class="fa fa-quote-left"></span>
+							<img src="assets/images/icons/quote_left.png" />
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
-                            <span class="fa fa-quote-right"></span>
+                            <img src="assets/images/icons/quote_right.png" />
                         </p>
                         <small>Someone famous</small>
                     </div>
@@ -159,7 +158,7 @@
             <div class="col-md-12">
                 <h3><small>Recent Bookings</small></h3>
                 <ul class="thumbnails">
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/rila.jpg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Rila mountain, Bulgaria" src="assets/images/rila_small.jpg">
@@ -169,18 +168,18 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">22 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
                                 </p>
+                                <p>22 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/varna_panorama.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Varna" src="assets/images/varna.jpeg">
@@ -190,18 +189,18 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">128 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
                                 </p>
+                                <p>28 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tsarevets.jpg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small.jpg">
@@ -211,18 +210,18 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">28 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
                                 </p>
+								<p>28 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/london.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london.jpeg">
@@ -232,18 +231,18 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
                                 </p>
+								<p>15 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cibeles.jpg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small.jpg">
@@ -253,39 +252,39 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
                                 </p>
+								<p>12 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_1.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
                                 </p>
+								<p>6 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree.jpeg">
@@ -295,18 +294,18 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
                                 </p>
+								<p>31 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran.jpeg">
@@ -316,18 +315,18 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">0 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
                                 </p>
+								<p>0 reviews</p>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah.jpeg">
@@ -337,14 +336,833 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">0 reviews</p>
                                 <p>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
                                 </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tsarevets.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small_2.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Tzarevets, Veliko Tarnovo, Bulgaria</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+                                </p>
+								<p>28 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/london.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london_2.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">London</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+                                </p>
+								<p>15 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cibeles.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small_2.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>12 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_2.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_2.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_2.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_2.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_3.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_3.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_3.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_3.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_4.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_4.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_4.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_4.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+					</li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_5.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_5.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_5.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_5.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_6.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_6.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_6.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_6.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_7.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_7.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_7.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_7.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_8.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_8.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_8.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_8.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_9.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_9.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_9.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_9.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_10.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>6 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_10.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star_filled.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>31 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_10.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_10.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p>
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+									<img src="assets/images/icons/star.png" />
+                                </p>
+								<p>0 reviews</p>
                             </div>
                         </div>
                     </li>
