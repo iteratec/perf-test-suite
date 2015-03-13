@@ -1,15 +1,1 @@
-(function($){
-
-    $.fn.shuffle = function() {
-        return this.each(function(){
-            var items = $(this).children().clone(true);
-            return (items.length) ? $(this).html($.shuffle(items)) : this;
-        });
-    }
-    
-    $.shuffle = function(arr) {
-        for(var j, x, i = arr.length; i; j = parseInt(Math.random() * i), x = arr[--i], arr[i] = arr[j], arr[j] = x);
-        return arr;
-    }
-    
-})(jQuery);
+(function(a){a.fn.shuffle=function(){return this.each(function(){var b=a(this).children().clone(true);return(b.length)?a(this).html(a.shuffle(b)):this})};a.shuffle=function(c){for(var d,b,e=c.length;e;d=parseInt(Math.random()*e),b=c[--e],c[e]=c[d],c[d]=b){}return c}})(jQuery);
