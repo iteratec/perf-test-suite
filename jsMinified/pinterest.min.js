@@ -1,0 +1,5 @@
+$(document).ready(function(a){a("a[rel='colorbox']").colorbox({transition:"elastic",opacity:"0.7",maxHeight:"90%"});a("a.gallery").colorbox({rel:"group"});a("a[rel='colorboxvideo']").colorbox({iframe:true,transition:"elastic",opacity:"0.7",innerWidth:"60%",innerHeight:"80%"})});
+/*!
+ * StrapPress Extras
+ */
+jQuery(function(){jQuery("a[rel=popover]").popover().click(function(a){a.preventDefault()});jQuery("a[rel=tooltip]").tooltip();jQuery("#tiles").imagesLoaded(function(){var c=null;var b={autoResize:true,container:jQuery("#main"),offset:5,itemWidth:230};function a(f){var e=(jQuery(window).scrollTop()+jQuery(window).height()>jQuery(document).height()-100);if(e){var d=jQuery("#tiles li");if(c){c.wookmarkClear()}c=jQuery("#tiles li");c.wookmark(b)}}jQuery(document).ready(new function(){jQuery(document).bind("scroll",a);c=jQuery("#tiles li");c.wookmark(b)})})});
