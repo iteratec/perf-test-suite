@@ -8,7 +8,7 @@ Optimierung: Inklusion von optimization_includes/chunked_encoding.inc, wenn begi
 macht: Thomas Heigl
 
 # css-Sprites?
-macht: ?
+macht: Thomas Heigl
 
 # js und css minifizieren
 macht: Michael Haas
