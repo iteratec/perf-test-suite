@@ -93,3 +93,7 @@ li{list-style-type: none;}
 .server-sponsor {
     margin-top: 2em;
 }
+
+.ratings img {
+	width:	15px;
+}
