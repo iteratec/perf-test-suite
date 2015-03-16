@@ -48,9 +48,10 @@
 
     <?php
         //include optimization code
-        $beginBodyInclude = isset($_GET["beginbodyinclude"]) && $_GET["beginbodyinclude"];
-        if($beginBodyInclude) include_once("optimization_includes/${beginBodyInclude}.inc");
-
+        if(isset($_GET["beginbodyinclude"])){
+            $beginBodyInclude = $_GET["beginbodyinclude"];
+            include_once("optimization_includes/$beginBodyInclude.inc");
+        }
         //simulate server side processing time
         $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
         if($sleep && $sleep.is_int()){
