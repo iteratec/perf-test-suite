@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).load(function(){
 	$("[data-src]").each(function(index, elem){
 		elem = $(elem);
 		
