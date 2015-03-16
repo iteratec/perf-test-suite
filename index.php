@@ -159,7 +159,7 @@
             <div class="col-md-12">
                 <h3><small>Recent Bookings</small></h3>
                 <ul class="thumbnails">
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/rila.jpg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Rila mountain, Bulgaria" src="assets/images/rila_small.jpg">
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/varna_panorama.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Varna" src="assets/images/varna.jpeg">
@@ -190,7 +190,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">128 reviews</p>
+                                <p class="pull-right">28 reviews</p>
                                 <p>
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
@@ -201,7 +201,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tsarevets.jpg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small.jpg">
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/london.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london.jpeg">
@@ -243,7 +243,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cibeles.jpg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small.jpg">
@@ -264,7 +264,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small.jpg">
@@ -285,7 +285,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree.jpeg">
@@ -306,7 +306,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran.jpeg">
@@ -327,7 +327,154 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-4">
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Africa</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">0 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tsarevets.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Tzarevets, Veliko Tarnovo, Bulgaria</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">28 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/london.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">London</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/cibeles.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">12 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/recife.jpg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small.jpg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">6 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">Asia</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">31 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
+                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                            <a href="javascript:;">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran.jpeg">
+                            </a>
+                            <div class="caption">
+                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">0 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah.jpeg">
