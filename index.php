@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Iliyan Peychev">
+    <meta name="author" content="iteratec">
 
-    <title>HTTP 2.0 Rulez!</title>
+    <title>perf-test-suite</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -30,9 +30,33 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/shuffle.js"></script>
+    <script src="js/jquery.shapeshift.js"></script>
+    <script src="js/homepage.js"></script>
+
 </head>
 
 <body>
+
+    <?php
+        //include optimization code
+        $beginBodyInclude = $_GET["beginbodyinclude"];
+        if($beginBodyInclude) include_once("optimization_includes/${beginBodyInclude}.inc");
+
+        //simulate server side processing time
+        $sleep = $_GET["sleep"];
+        if($sleep && $sleep.is_int()){
+            sleep($sleep);
+        }
+    ?>
 
     <!-- Navigation -->
     <header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -69,58 +93,6 @@
 
     <!-- Page Content -->
     <div class="container page" id="home">
-
-    <div class="row">
-        <div class="col-md-12">
-            <h1>HTTP/2, SPDY and QUIC rulez and here is the evidence</h1>
-
-            <div>
-                <p>
-                    The purpose of this site is to show what is the difference when same content is being served via different protocols - <a href="http://http2rulez.com">HTTP</a>, <a href="https://http2rulez.com">HTTP/2</a>, <a href="https://http2rulez.com:8082">SPDY</a> and <a href="https://http2rulez.com:8081">raw SSL</a>.
-                </p>
-
-                <p>
-                    The current page is a typical online shop page, where different products are listed. It contains a few CSS files, JavaScript files and images. All of them were not joined, neither sprites were created intentionally.
-                </p>
-
-                <h3>View current page via some of the following protocols:</h3>
-
-                <a class="btn btn-primary btn-lg" href="http://http2rulez.com">HTTP</a>
-                <a class="btn btn-primary btn-lg" href="https://http2rulez.com">HTTP/2</a>
-                <a class="btn btn-primary btn-lg" href="https://http2rulez.com:8082">SPDY</a>
-                <a class="btn btn-primary btn-lg" href="https://http2rulez.com:8081">HTTPS</a>
-
-                <h3>Current browser support for HTTP/2</h3>
-
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-success">
-                    <span class="glyphicon glyphicon-ok"></span>&nbsp;<a href="http://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a> - you have to enable SPDY/4 flag by typing "chrome://flags" in address bar and search for "HTTP/2" or "SPDY/4"
-                  </li>
-                  <li class="list-group-item list-group-item-success">
-                    <span class="glyphicon glyphicon-ok"></span>&nbsp;<a href="https://www.mozilla.org/firefox/">Firefox</a>
-                  </li>
-                  <li class="list-group-item list-group-item-danger">
-                    <span class="glyphicon glyphicon-remove"></span>&nbsp;<a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> (in development)
-                  </li>
-                  <li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;<a href="https://www.apple.com/safari/">Safari</a></li>
-                </ul>
-
-                <h3>Webpagetest.org is our best friend in performance checking!</h3>
-                    Using <a href="http://www.webpagetest.org/">Webpagetest.org</a> to check how the site behaves is highly recommendable. The development tools of browsers are very good starting point too. When you test, be sure that you checked via mobile networks and slow Internet connections too.
-                </h3>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-        <div class="col-md-12" id="timingResult">
-            Loading timing events, please wait...
-        </div>
-    </div>
-
-    <hr>
 
         <h2>Example shop page</h2>
 
@@ -379,6 +351,14 @@
                 </ul>
             </div>
         </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-md-12" id="timingResult">
+                Loading timing events, please wait...
+            </div>
+        </div>
+
     </div>
     <!-- /.container -->
 
@@ -387,34 +367,14 @@
         <footer>
             <div class="row">
                 <div class="col-md-12">
-                    <p>HTTP 2.0 Rulez! has been created by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a> in 2014.<br>Thanks to <a href="https://github.com/shigeki">Shigeki Ohtsu</a>, <a href="https://github.com/molnarg">Gábor Molnár</a> and <a href="http://www.chromium.org/spdy/http2">Johnny Graettinger</a> for their awesome work on HTTP/2 and the advices they provided me!</p>
-
-                    <div class="server-sponsor">
-                        <div>
-                            The server has been provided by:
-                        </div>
-                    </div>
-
-                    <a href="https://altscale.com"><img src="assets/images/altscale-logo-200px.png"></a>
+                    <p>Performance test suite is created by iteratec and based on <a href="http://http2rulez.com/">HTTP 2.0 Rulez!</a> by <a href="https://twitter.com/ipeychev">Iliyan Peychev</a>.<br></p>
                 </div>
             </div>
         </footer>
     </div>
     <!-- /.container -->
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/shuffle.js"></script>
-    <script src="js/jquery.shapeshift.js"></script>
-    <script src="js/homepage.js"></script>
     <script src="js/profiler.js"></script>
-
     <script>
         new __Profiler().init(document.getElementById('timingResult'));
     </script>
