@@ -70,13 +70,13 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a href="index.html" class="navbar-brand">HTTP2Rulez!</a>
+                <a href="index.php" class="navbar-brand">HTTP2Rulez!</a>
             </div>
 
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
                     <li>
-                        <a class="selected" href="index.html">Home</a>
+                        <a class="selected" href="index.php">Home</a>
                     </li>
                     <li>
                         <a href="web-components.html">Web Components</a>
