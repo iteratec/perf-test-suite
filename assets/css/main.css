@@ -97,3 +97,13 @@ li{list-style-type: none;}
 .ratings img {
 	width:	15px;
 }
+
+.carousel-control.left img, .carousel-control.right img, .sprite-chevron-left, .sprite-chevron-right {
+	margin-top: -15px;
+	right: 50%;
+	margin-right: -10px;
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: inline-block;
+}

@@ -1,0 +1,35 @@
+.sprite {
+    background-image: url(../images/icons/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-bars {
+    width: 20px;
+    height: 20px;
+    background-position: -5px -5px;
+}
+
+.sprite-chevron-left {
+    width: 21px;
+    height: 40px;
+    background-position: -35px -5px;
+}
+
+.sprite-chevron-right {
+    width: 21px;
+    height: 40px;
+    background-position: -66px -5px;
+}
+
+.sprite-star {
+    width: 15px;
+    height: 15px;
+    background-position: -5px -55px;
+}
+
+.sprite-star_filled {
+    width: 15px;
+    height: 15px;
+    background-position: -30px -55px;
+}
