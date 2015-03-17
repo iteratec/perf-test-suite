@@ -144,9 +144,9 @@
                     </div>
                     <div class="col-sm-9">
                         <p>
-                            <span class="fa fa-quote-left"></span>
+							<i class="sprite sprite-quote_left"></i>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
-                            <span class="fa fa-quote-right"></span>
+                            <i class="sprite sprite-quote_right"></i>
                         </p>
                         <small>Someone famous</small>
                     </div>

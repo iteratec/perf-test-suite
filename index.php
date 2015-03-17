@@ -144,9 +144,9 @@
                     </div>
                     <div class="col-sm-9">
                         <p>
-                            <span class="fa fa-quote-left"></span>
+							<img src="assets/images/icons/quote_left.png" />
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
-                            <span class="fa fa-quote-right"></span>
+                            <img src="assets/images/icons/quote_right.png" />
                         </p>
                         <small>Someone famous</small>
                     </div>
