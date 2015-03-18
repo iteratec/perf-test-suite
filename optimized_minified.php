@@ -11,17 +11,17 @@
     <title>perf-test-suite</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/cssMinified/bootstrap.css" rel="stylesheet">
 
     <!-- Jquery Magnific popup css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="assets/cssMinified/magnific-popup.css">
 
     <!-- icons -->
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/cssMinified/font-awesome.css">
 
     <!-- Custom CSS -->
-    <link href="assets/css/header.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/cssMinified/header.css" rel="stylesheet">
+    <link href="assets/cssMinified/main.css" rel="stylesheet">
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,14 +32,14 @@
     <![endif]-->
 
     <!-- jQuery Version 1.11.0 -->
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+	<script src="jsMinified/jquery-1.11.0.js"></script>
+	<script src="jsMinified/jquery-ui.min.js"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script src="js/shuffle.js"></script>
-	<script src="js/jquery.shapeshift.js"></script>
-	<script src="js/homepage.js"></script>
+	<script src="jsMinified/bootstrap.min.js"></script>
+	<script src="jsMinified/jquery.magnific-popup.js"></script>
+	<script src="jsMinified/shuffle.js"></script>
+	<script src="jsMinified/jquery.shapeshift.js"></script>
+	<script src="jsMinified/homepage.js"></script>
 
 </head>
 
@@ -1187,7 +1187,7 @@
 
     
 
-    <script src="js/profiler.js"></script>
+    <script src="jsMinified/profiler.js"></script>
     <script>
         new __Profiler().init(document.getElementById('timingResult'));
     </script>

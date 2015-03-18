@@ -46,7 +46,9 @@
 <body>
 
     <?php
-        
+        if (ob_get_level() == 0) ob_start();
+		ob_flush();
+		flush();
         //simulate server side processing time
         $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
 		if($sleep && $sleep.is_int()) sleep($sleep);

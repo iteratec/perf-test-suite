@@ -11,18 +11,18 @@
     <title>perf-test-suite</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<%= css_folder %>/bootstrap.css" rel="stylesheet">
 
     <!-- Jquery Magnific popup css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="<%= css_folder %>/magnific-popup.css">
 
     <!-- icons -->
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="<%= css_folder %>/font-awesome.css">
 
     <!-- Custom CSS -->
-    <link href="assets/css/header.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
-    
+    <link href="<%= css_folder %>/header.css" rel="stylesheet">
+    <link href="<%= css_folder %>/main.css" rel="stylesheet">
+    <%= sprites_stylesheets %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,25 +31,16 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- jQuery Version 1.11.0 -->
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script src="js/shuffle.js"></script>
-	<script src="js/jquery.shapeshift.js"></script>
-	<script src="js/homepage.js"></script>
+    <%= javascripts_head %>
 
 </head>
 
 <body>
 
     <?php
-        
+        <%= chunked_encoding_block %>
         //simulate server side processing time
-        $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
-		if($sleep && $sleep.is_int()) sleep($sleep);
+        <%= sleep_block %>
     ?>
 
     <!-- Navigation -->
@@ -59,7 +50,7 @@
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <img src="assets/images/icons/bars.png" />
+                    <%= img_small_bars %>
                 </button>
 
                 <a href="index.php" class="navbar-brand">HTTP2Rulez!</a>
@@ -105,23 +96,23 @@
                                 <img class="slide-image" src="assets/images/country-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/boat-1170x400.jpeg" alt="">
+                                <img class="slide-image" <%= data_prefix_pictureload %>src="assets/images/boat-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/snow-1170x400.jpeg" alt="">
+                                <img class="slide-image" <%= data_prefix_pictureload %>src="assets/images/snow-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/beach-1170x400.jpeg" alt="">
+                                <img class="slide-image" <%= data_prefix_pictureload %>src="assets/images/beach-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/glass-building-1170x400.jpeg" alt="">
+                                <img class="slide-image" <%= data_prefix_pictureload %>src="assets/images/glass-building-1170x400.jpeg" alt="">
                             </div>
                         </div>
                         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <img src="assets/images/icons/chevron-left.png" />
+                            <%= img_small_chevron_left %>
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <img src="assets/images/icons/chevron-right.png" />
+                            <%= img_small_chevron_right %>
                         </a>
                     </div>
                 </div>
@@ -137,9 +128,9 @@
                     </div>
                     <div class="col-sm-9">
                         <p>
-                            <img src="assets/images/icons/quote_left.png" />
+                            <%= img_small_quote_left %>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
-                            <img src="assets/images/icons/quote_right.png" />
+                            <%= img_small_quote_right %>
                         </p>
                         <small>Someone famous</small>
                     </div>
@@ -162,11 +153,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-                                    <img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+                                    <%= icon_block %>
                                 </p>
                                 <p>22 reviews</p>
                             </div>
@@ -183,11 +170,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
                                 <p>28 reviews</p>
                             </div>
@@ -204,11 +187,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>28 reviews</p>
                             </div>
@@ -225,11 +204,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>15 reviews</p>
                             </div>
@@ -238,7 +213,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cibeles.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" <%= data_prefix_pictureload %>src="assets/images/cibeles_small.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
@@ -246,11 +221,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>12 reviews</p>
                             </div>
@@ -259,7 +230,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_1.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_1.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -267,11 +238,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -280,7 +247,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -288,11 +255,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -301,7 +264,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -309,11 +272,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -322,7 +281,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -330,11 +289,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -343,7 +298,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tsarevets.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small_2.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" <%= data_prefix_pictureload %>src="assets/images/tsarevets_small_2.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Tzarevets, Veliko Tarnovo, Bulgaria</a></h4>
@@ -351,11 +306,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>28 reviews</p>
                             </div>
@@ -364,7 +315,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/london.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" <%= data_prefix_pictureload %>src="assets/images/london_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">London</a></h4>
@@ -372,11 +323,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>15 reviews</p>
                             </div>
@@ -385,7 +332,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cibeles.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small_2.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" <%= data_prefix_pictureload %>src="assets/images/cibeles_small_2.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
@@ -393,11 +340,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>12 reviews</p>
                             </div>
@@ -406,7 +349,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_2.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_2.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -414,11 +357,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -427,7 +366,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -435,11 +374,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -448,7 +383,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -456,11 +391,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -469,7 +400,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -477,11 +408,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -490,7 +417,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_3.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_3.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -498,11 +425,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -511,7 +434,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_3.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_3.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -519,11 +442,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -532,7 +451,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_3.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_3.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -540,11 +459,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -553,7 +468,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_3.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_3.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -561,11 +476,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -574,7 +485,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_4.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_4.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -582,11 +493,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -595,7 +502,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_4.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_4.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -603,11 +510,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -616,7 +519,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_4.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_4.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -624,11 +527,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -637,7 +536,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_4.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_4.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -645,11 +544,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -658,7 +553,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_5.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_5.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -666,11 +561,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -679,7 +570,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_5.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_5.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -687,11 +578,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -700,7 +587,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_5.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_5.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -708,11 +595,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -721,7 +604,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_5.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_5.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -729,11 +612,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -742,7 +621,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_6.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_6.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -750,11 +629,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -763,7 +638,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_6.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_6.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -771,11 +646,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -784,7 +655,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_6.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_6.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -792,11 +663,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -805,7 +672,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_6.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_6.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -813,11 +680,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -826,7 +689,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_7.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_7.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -834,11 +697,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -847,7 +706,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_7.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_7.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -855,11 +714,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -868,7 +723,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_7.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_7.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -876,11 +731,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -889,7 +740,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_7.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_7.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -897,11 +748,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -910,7 +757,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_8.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_8.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -918,11 +765,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -931,7 +774,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_8.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_8.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -939,11 +782,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -952,7 +791,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_8.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_8.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -960,11 +799,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -973,7 +808,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_8.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_8.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -981,11 +816,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -994,7 +825,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_9.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_9.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -1002,11 +833,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -1015,7 +842,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_9.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_9.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -1023,11 +850,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -1036,7 +859,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_9.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_9.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -1044,11 +867,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -1057,7 +876,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_9.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_9.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -1065,11 +884,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -1078,7 +893,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_10.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="assets/images/recife_small_10.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -1086,11 +901,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>6 reviews</p>
                             </div>
@@ -1099,7 +910,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_10.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="assets/images/tree_10.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -1107,11 +918,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>31 reviews</p>
                             </div>
@@ -1120,7 +927,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_10.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="assets/images/san-fran_10.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -1128,11 +935,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -1141,7 +944,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="assets/images/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_10.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="assets/images/cheetah_10.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -1149,11 +952,7 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star_filled.png" />
-									<img src="assets/images/icons/star.png" />
-									<img src="assets/images/icons/star.png" />
+									<%= icon_block %>
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -1185,9 +984,9 @@
     </div>
     <!-- /.container -->
 
-    
+    <%= javascripts_end_body %>
 
-    <script src="js/profiler.js"></script>
+    <script src="<%= js_folder %>/profiler.js"></script>
     <script>
         new __Profiler().init(document.getElementById('timingResult'));
     </script>

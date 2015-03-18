@@ -1,0 +1,53 @@
+{
+	"common":{
+		"chunked_encoding_block":"",
+		"sleep_block":"$sleep = (isset($_GET[\"sleep\"]) ? $_GET[\"sleep\"] : 0);\n\t\tif($sleep && $sleep.is_int()) sleep($sleep);",
+		"css_folder":"assets/css",
+		"js_folder":"js",
+		"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.min.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.min.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
+		"javascripts_end_body":"",
+		"data_prefix_pictureload": "",
+		"sprites_stylesheets": "",
+		"img_small_bars": "<img src=\"assets/images/icons/bars.png\" />",
+		"img_small_chevron_left": "<img src=\"assets/images/icons/chevron-left.png\" />",
+		"img_small_chevron_right": "<img src=\"assets/images/icons/chevron-right.png\" />",
+		"img_small_quote_left": "<img src=\"assets/images/icons/quote_left.png\" />",
+		"img_small_quote_right": "<img src=\"assets/images/icons/quote_right.png\" />",
+		"icon_block": "<img src=\"assets/images/icons/star_filled.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star_filled.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star_filled.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star.png\" />"
+	},
+	"variants": [
+		{
+			"_comment": "completely unoptimized index.php",
+			"name": "index.php",
+		},
+		{
+			"_comment": "delivers html as chunks (chunked encoding)",
+			"name": "optimized_chunked_encoding.php",
+			"chunked_encoding_block":"if (ob_get_level() == 0) ob_start();\n\t\tob_flush();\n\t\tflush();",
+		},
+		{
+			"_comment": "css and javascripts get delivered as minified versions",
+			"name": "optimized_minified.php",
+			"css_folder":"assets/cssMinified",
+			"js_folder":"jsMinified",
+			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"jsMinified/jquery-1.11.0.js\"></script>\n\t<script src=\"jsMinified/jquery-ui.min.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"jsMinified/bootstrap.min.js\"></script>\n\t<script src=\"jsMinified/jquery.magnific-popup.js\"></script>\n\t<script src=\"jsMinified/shuffle.js\"></script>\n\t<script src=\"jsMinified/jquery.shapeshift.js\"></script>\n\t<script src=\"jsMinified/homepage.js\"></script>",
+		},
+		{
+			"_comment": "just images shown above the fold get loaded before window.onload",
+			"name": "optimized_pictureload.php",
+			"javascripts_end_body":"<script src=\"js/postPictureLoad.js\"></script>",
+			"data_prefix_pictureload": "data-",
+		},
+		{
+			"_comment": "css sprite replaces multiple icons",
+			"name": "optimized_css_sprites.php",
+			"sprites_stylesheets": "<link href=\"assets/css/spritesheet.css\" rel=\"stylesheet\">",
+			"img_small_bars": "<i class=\"sprite sprite-bars\"></i>",
+			"img_small_chevron_left": "<i class=\"sprite sprite-chevron-left\"></i>",
+			"img_small_chevron_right": "<i class=\"sprite sprite-chevron-right\"></i>",
+			"img_small_quote_left": "<i class=\"sprite sprite-quote-left\"></i>",
+			"img_small_quote_right": "<i class=\"sprite sprite-quote-right\"></i>",
+			"icon_block": "<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star\"></i>"
+		}
+	]
+}

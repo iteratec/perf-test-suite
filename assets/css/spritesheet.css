@@ -22,13 +22,13 @@
     background-position: -66px -5px;
 }
 
-.sprite-quote_left {
+.sprite-quote-left {
     width: 18px;
     height: 15px;
     background-position: -5px -55px;
 }
 
-.sprite-quote_right {
+.sprite-quote-right {
     width: 18px;
     height: 15px;
     background-position: -33px -55px;
@@ -40,7 +40,7 @@
     background-position: -61px -55px;
 }
 
-.sprite-star_filled {
+.sprite-star-filled {
     width: 15px;
     height: 15px;
     background-position: -86px -55px;
