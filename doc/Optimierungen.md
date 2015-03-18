@@ -21,3 +21,6 @@ macht: ?
 
 # css/js kombinieren.
 macht: ?
+
+# Bildoptimierung kleiner machen/Qualität optimieren
+macht: ?

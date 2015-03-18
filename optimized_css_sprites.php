@@ -74,7 +74,7 @@
                         <a null href="optimized_chunked_encoding.php">Chunked encodig</a>
                     </li>
                     <li>
-                        <a class="selected"java.io.FileWriter@7d311feb href="optimized_css_sprites.php">CSS Sprites</a>
+                        <a class="selected"java.io.FileWriter@57cf54e1 href="optimized_css_sprites.php">CSS Sprites</a>
                     </li>
                     <li>
                         <a null href="optimized_minified.php">Minified Resources</a>
@@ -168,7 +168,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Rila mountain, Bulgaria" src="assets/images/rila_small.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Rila mountain, Bulgaria</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-mountain"></i> Rila mountain, Bulgaria
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -189,7 +193,12 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Varna" src="assets/images/varna.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Varna, Bulgaria</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-town"></i>
+										Varna, Bulgaria
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -210,7 +219,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Tzarevets, Veliko Tarnovo, Bulgaria</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-nature"></i> Tzarevets, Veliko Tarnovo, Bulgaria
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -231,7 +244,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">London</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-travel"></i> London
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -252,7 +269,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-sun"></i> Cibeles, Madrid, Spain
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -273,7 +294,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_1.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-beach"></i> Recife, Brasil
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -294,7 +319,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<img class="icon-small" src="assets/images/icons/holiday-tree.png" /> Asia
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -315,7 +344,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-car"></i> San Francisco
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -336,7 +369,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-nature"></i> Africa
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -357,7 +394,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small_2.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Tzarevets, Veliko Tarnovo, Bulgaria</a></h4>
+                                <h4>
+									<a href="javascript:;">
+										<i class="sprite sprite-holiday-animals"></i> Tzarevets, Veliko Tarnovo, Bulgaria
+									</a>
+								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">

@@ -11,9 +11,18 @@
 		"img_small_bars": "<img src=\"assets/images/icons/bars.png\" />",
 		"img_small_chevron_left": "<img src=\"assets/images/icons/chevron-left.png\" />",
 		"img_small_chevron_right": "<img src=\"assets/images/icons/chevron-right.png\" />",
-		"img_small_quote_left": "<img src=\"assets/images/icons/quote_left.png\" />",
-		"img_small_quote_right": "<img src=\"assets/images/icons/quote_right.png\" />",
-		"icon_block": "<img src=\"assets/images/icons/star_filled.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star_filled.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star_filled.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star.png\" />\n\t\t\t\t\t\t\t\t\t<img src=\"assets/images/icons/star.png\" />"
+		"img_small_quote_left": "<img src=\"assets/images/icons/quote-left.png\" />",
+		"img_small_quote_right": "<img src=\"assets/images/icons/quote-right.png\" />",
+		"icon_block": "<img class=\"icon-small\" src=\"assets/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star.png\" />",
+		"icon_holiday_mountain": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-mountain.png\" />",
+		"icon_holiday_town": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-town.png\" />",
+		"icon_holiday_nature": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-nature.png\" />",
+		"icon_holiday_travel": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-travel.png\" />",
+		"icon_holiday_sun": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-sun.png\" />",
+		"icon_holiday_beach": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-beach.png\" />",
+		"icon_holiday_tree": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-tree.png\" />",
+		"icon_holiday_car": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-car.png\" />",
+		"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-animals.png\" />"
 	},
 	"variants": [
 		{
@@ -47,7 +56,15 @@
 			"img_small_chevron_right": "<i class=\"sprite sprite-chevron-right\"></i>",
 			"img_small_quote_left": "<i class=\"sprite sprite-quote-left\"></i>",
 			"img_small_quote_right": "<i class=\"sprite sprite-quote-right\"></i>",
-			"icon_block": "<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star\"></i>"
+			"icon_block": "<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star-filled\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"sprite sprite-star\"></i>",
+			"icon_holiday_mountain": "<i class=\"sprite sprite-holiday-mountain\"></i>",
+			"icon_holiday_town": "<i class=\"sprite sprite-holiday-town\"></i>",
+			"icon_holiday_nature": "<i class=\"sprite sprite-holiday-nature\"></i>",
+			"icon_holiday_travel": "<i class=\"sprite sprite-holiday-travel\"></i>",
+			"icon_holiday_sun": "<i class=\"sprite sprite-holiday-sun\"></i>",
+			"icon_holiday_beach": "<i class=\"sprite sprite-holiday-beach\"></i>",
+			"icon_holiday_car": "<i class=\"sprite sprite-holiday-car\"></i>",
+			"icon_holiday_animals": "<i class=\"sprite sprite-holiday-animals\"></i>"
 		}
 	]
 }

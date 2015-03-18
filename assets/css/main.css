@@ -107,3 +107,9 @@ li{list-style-type: none;}
 	z-index: 5;
 	display: inline-block;
 }
+
+.icon-small {
+	height:	15px !important;
+	width:	15px !important;
+	display: inline-block !important;
+}
