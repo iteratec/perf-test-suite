@@ -59,22 +59,22 @@
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
                     <li>
-                        <a <%= if (name.equals('index.php')) out << "class=\"selected\"" %> href="index.php">Home</a>
+                        <a <%= out << (name.equals('index.php') ? "class=\"selected\"" : "");return "" %> href="index.php">Home</a>
                     </li>
                     <li>
-                        <a <%= if (name.equals('optimized_chunked_encoding.php')) out << "class=\"selected\"" %> href="optimized_chunked_encoding.php">Chunked encodig</a>
+                        <a <%= out << (name.equals('optimized_chunked_encoding.php') ? "class=\"selected\"" : "");return "" %> href="optimized_chunked_encoding.php">Chunked encodig</a>
                     </li>
                     <li>
-                        <a <%= if (name.equals('optimized_css_sprites.php')) out << "class=\"selected\"" %> href="optimized_css_sprites.php">CSS Sprites</a>
+                        <a <%= out << (name.equals('optimized_css_sprites.php') ? "class=\"selected\"" : "");return "" %> href="optimized_css_sprites.php">CSS Sprites</a>
                     </li>
                     <li>
-                        <a <%= if (name.equals('optimized_minified.php')) out << "class=\"selected\"" %> href="optimized_minified.php">Minified Resources</a>
+                        <a <%= out << (name.equals('optimized_minified.php') ? "class=\"selected\"" : "");return "" %> href="optimized_minified.php">Minified Resources</a>
                     </li>
                     <li>
-                        <a <%= if (name.equals('optimized_pictureload.php')) out << "class=\"selected\"" %> href="optimized_pictureload.php">Postload images</a>
+                        <a <%= out << (name.equals('optimized_pictureload.php') ? "class=\"selected\"" : "");return "" %> href="optimized_pictureload.php">Postload images</a>
                     </li>
                     <li>
-                        <a <%= if (name.equals('optimized_javascripts_end_of_body.php')) out << "class=\"selected\"" %> href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
+                        <a <a <a <%= out << (name.equals('optimized_javascripts_end_of_body.php') ? "class=\"selected\"" : "");return "" %> href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
                     </li>
                     <!-- we should add an about page
                     <li>

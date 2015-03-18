@@ -68,19 +68,22 @@
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
                     <li>
-                        <a null href="index.php">Home</a>
+                        <a  href="index.php">Home</a>
                     </li>
                     <li>
-                        <a null href="optimized_chunked_encoding.php">Chunked encodig</a>
+                        <a  href="optimized_chunked_encoding.php">Chunked encodig</a>
                     </li>
                     <li>
-                        <a class="selected"java.io.FileWriter@57cf54e1 href="optimized_css_sprites.php">CSS Sprites</a>
+                        <a class="selected" href="optimized_css_sprites.php">CSS Sprites</a>
                     </li>
                     <li>
-                        <a null href="optimized_minified.php">Minified Resources</a>
+                        <a  href="optimized_minified.php">Minified Resources</a>
                     </li>
                     <li>
-                        <a null href="optimized_pictureload.php">Postload images</a>
+                        <a  href="optimized_pictureload.php">Postload images</a>
+                    </li>
+                    <li>
+                        <a <a <a  href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
                     </li>
                     <!-- we should add an about page
                     <li>

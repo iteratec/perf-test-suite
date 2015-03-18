@@ -31,24 +31,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- jQuery Version 1.11.0 -->
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/jquery-ui.js"></script>
-	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.js"></script>
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script src="js/shuffle.js"></script>
-	<script src="js/jquery.shapeshift.js"></script>
-	<script src="js/homepage.js"></script>
+    
 
 </head>
 
 <body>
 
     <?php
-        if (ob_get_level() == 0) ob_start();
-		ob_flush();
-		flush();
+        
         //simulate server side processing time
         $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
 		if($sleep && $sleep.is_int()) sleep($sleep);
@@ -73,7 +63,7 @@
                         <a  href="index.php">Home</a>
                     </li>
                     <li>
-                        <a class="selected" href="optimized_chunked_encoding.php">Chunked encodig</a>
+                        <a  href="optimized_chunked_encoding.php">Chunked encodig</a>
                     </li>
                     <li>
                         <a  href="optimized_css_sprites.php">CSS Sprites</a>
@@ -85,7 +75,7 @@
                         <a  href="optimized_pictureload.php">Postload images</a>
                     </li>
                     <li>
-                        <a <a <a  href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
+                        <a <a <a class="selected" href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
                     </li>
                     <!-- we should add an about page
                     <li>
@@ -822,7 +812,15 @@
     </div>
     <!-- /.container -->
 
-    
+    <!-- jQuery Version 1.11.0 -->
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script src="js/shuffle.js"></script>
+	<script src="js/jquery.shapeshift.js"></script>
+	<script src="js/homepage.js"></script>
 
     <script src="js/profiler.js"></script>
     <script>
