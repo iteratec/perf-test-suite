@@ -2,11 +2,12 @@
 	"common":{
 		"chunked_encoding_block":"",
 		"sleep_block":"$sleep = (isset($_GET[\"sleep\"]) ? $_GET[\"sleep\"] : 0);\n\t\tif($sleep && $sleep.is_int()) sleep($sleep);",
-		"css_folder":"assets/css",
 		"js_folder":"js",
+		"css_folder":"assets/css",
 		"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
 		"javascripts_end_body":"",
 		"data_prefix_pictureload": "",
+		"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets/css/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets/css/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets/css/main.css\" rel=\"stylesheet\">",
 		"sprites_stylesheets": "",
 		"img_small_bars": "<img src=\"assets/images/icons/bars.png\" />",
 		"img_small_chevron_left": "<img src=\"assets/images/icons/chevron-left.png\" />",
@@ -40,6 +41,7 @@
 			"css_folder":"assets/cssMinified",
 			"js_folder":"jsMinified",
 			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"jsMinified/jquery-1.11.0.js\"></script>\n\t<script src=\"jsMinified/jquery-ui.min.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"jsMinified/bootstrap.min.js\"></script>\n\t<script src=\"jsMinified/jquery.magnific-popup.js\"></script>\n\t<script src=\"jsMinified/shuffle.js\"></script>\n\t<script src=\"jsMinified/jquery.shapeshift.js\"></script>\n\t<script src=\"jsMinified/homepage.js\"></script>",
+			"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets/cssMinified/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/cssMinified/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/cssMinified/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets/cssMinified/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets/cssMinified/main.css\" rel=\"stylesheet\">",
 		},
 		{
 			"_comment": "just images shown above the fold get loaded before window.onload",
@@ -71,6 +73,18 @@
 			"name": "optimized_javascripts_end_of_body.php",
 			"javascripts_end_body":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
 			"javascripts_head":"",
+		},
+		{
+			"_comment": "javascripts get loaded at the end of the body",
+			"name": "optimized_javascripts_end_of_body.php",
+			"javascripts_end_body":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
+			"javascripts_head":"",
+		},
+		{
+			"_comment": "all javascripts and stylesheet are combined into single files",
+			"name": "optimized_combined_javascript_css.php",
+			"stylesheets":"<link href=\"assets/css/public_all.css\" rel=\"stylesheet\">",
+			"javascripts_head":"<script src=\"js/public_all.js\"></script>"
 		}
 	]
 }

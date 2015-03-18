@@ -11,17 +11,14 @@
     <title>perf-test-suite</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/cssMinified/bootstrap.css" rel="stylesheet">
-
-    <!-- Jquery Magnific popup css -->
-    <link rel="stylesheet" type="text/css" href="assets/cssMinified/magnific-popup.css">
-
-    <!-- icons -->
-    <link rel="stylesheet" type="text/css" href="assets/cssMinified/font-awesome.css">
-
-    <!-- Custom CSS -->
-    <link href="assets/cssMinified/header.css" rel="stylesheet">
-    <link href="assets/cssMinified/main.css" rel="stylesheet">
+	<link href="assets/cssMinified/bootstrap.css" rel="stylesheet">
+	<!-- Jquery Magnific popup css -->
+	<link rel="stylesheet" type="text/css" href="assets/cssMinified/magnific-popup.css">
+	<!-- icons -->
+	<link rel="stylesheet" type="text/css" href="assets/cssMinified/font-awesome.css">
+	<!-- Custom CSS -->
+	<link href="assets/cssMinified/header.css" rel="stylesheet">
+	<link href="assets/cssMinified/main.css" rel="stylesheet">
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

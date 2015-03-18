@@ -10,18 +10,7 @@
 
     <title>perf-test-suite</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="<%= css_folder %>/bootstrap.css" rel="stylesheet">
-
-    <!-- Jquery Magnific popup css -->
-    <link rel="stylesheet" type="text/css" href="<%= css_folder %>/magnific-popup.css">
-
-    <!-- icons -->
-    <link rel="stylesheet" type="text/css" href="<%= css_folder %>/font-awesome.css">
-
-    <!-- Custom CSS -->
-    <link href="<%= css_folder %>/header.css" rel="stylesheet">
-    <link href="<%= css_folder %>/main.css" rel="stylesheet">
+    <%= stylesheets %>
     <%= sprites_stylesheets %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
