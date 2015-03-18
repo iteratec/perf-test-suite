@@ -4,7 +4,7 @@
 		"sleep_block":"$sleep = (isset($_GET[\"sleep\"]) ? $_GET[\"sleep\"] : 0);\n\t\tif($sleep && $sleep.is_int()) sleep($sleep);",
 		"css_folder":"assets/css",
 		"js_folder":"js",
-		"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.min.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.min.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
+		"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
 		"javascripts_end_body":"",
 		"data_prefix_pictureload": "",
 		"sprites_stylesheets": "",
