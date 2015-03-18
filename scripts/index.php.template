@@ -53,20 +53,31 @@
                     <%= img_small_bars %>
                 </button>
 
-                <a href="index.php" class="navbar-brand">HTTP2Rulez!</a>
+                <a href="index.php" class="navbar-brand">perf-test-suite</a>
             </div>
 
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
                     <li>
-                        <a class="selected" href="index.php">Home</a>
+                        <a <%= if (name.equals('index.php')) out << "class=\"selected\"" %> href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="web-components.html">Web Components</a>
+                        <a <%= if (name.equals('optimized_chunked_encoding.php')) out << "class=\"selected\"" %> href="optimized_chunked_encoding.php">Chunked encodig</a>
                     </li>
+                    <li>
+                        <a <%= if (name.equals('optimized_css_sprites.php')) out << "class=\"selected\"" %> href="optimized_css_sprites.php">CSS Sprites</a>
+                    </li>
+                    <li>
+                        <a <%= if (name.equals('optimized_minified.php')) out << "class=\"selected\"" %> href="optimized_minified.php">Minified Resources</a>
+                    </li>
+                    <li>
+                        <a <%= if (name.equals('optimized_pictureload.php')) out << "class=\"selected\"" %> href="optimized_pictureload.php">Postload images</a>
+                    </li>
+                    <!-- we should add an about page
                     <li>
                         <a href="about.html">About</a>
                     </li>
+                    -->
               </ul>
             </nav>
             <!-- /.navbar-collapse -->

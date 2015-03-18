@@ -62,20 +62,31 @@
                     <img src="assets/images/icons/bars.png" />
                 </button>
 
-                <a href="index.php" class="navbar-brand">HTTP2Rulez!</a>
+                <a href="index.php" class="navbar-brand">perf-test-suite</a>
             </div>
 
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
                     <li>
-                        <a class="selected" href="index.php">Home</a>
+                        <a class="selected"java.io.FileWriter@40d65732 href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="web-components.html">Web Components</a>
+                        <a null href="optimized_chunked_encoding.php">Chunked encodig</a>
                     </li>
+                    <li>
+                        <a null href="optimized_css_sprites.php">CSS Sprites</a>
+                    </li>
+                    <li>
+                        <a null href="optimized_minified.php">Minified Resources</a>
+                    </li>
+                    <li>
+                        <a null href="optimized_pictureload.php">Postload images</a>
+                    </li>
+                    <!-- we should add an about page
                     <li>
                         <a href="about.html">About</a>
                     </li>
+                    -->
               </ul>
             </nav>
             <!-- /.navbar-collapse -->
