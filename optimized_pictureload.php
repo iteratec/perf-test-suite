@@ -74,6 +74,9 @@
                         <a  href="optimized_css_sprites.php">CSS Sprites</a>
                     </li>
                     <li>
+                        <a  href="optimized_font_awesome.php">Font Awesome</a>
+                    </li>
+                    <li>
                         <a  href="optimized_minified.php">Minified Resources</a>
                     </li>
                     <li>

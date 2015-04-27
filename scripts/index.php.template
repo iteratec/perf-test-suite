@@ -57,6 +57,9 @@
                         <a <%= out << (name.equals('optimized_css_sprites.php') ? "class=\"selected\"" : "");return "" %> href="optimized_css_sprites.php">CSS Sprites</a>
                     </li>
                     <li>
+                        <a <%= out << (name.equals('optimized_font_awesome.php') ? "class=\"selected\"" : "");return "" %> href="optimized_font_awesome.php">Font Awesome</a>
+                    </li>
+                    <li>
                         <a <%= out << (name.equals('optimized_minified.php') ? "class=\"selected\"" : "");return "" %> href="optimized_minified.php">Minified Resources</a>
                     </li>
                     <li>

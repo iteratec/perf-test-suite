@@ -74,6 +74,9 @@
                         <a class="selected" href="optimized_css_sprites.php">CSS Sprites</a>
                     </li>
                     <li>
+                        <a  href="optimized_font_awesome.php">Font Awesome</a>
+                    </li>
+                    <li>
                         <a  href="optimized_minified.php">Minified Resources</a>
                     </li>
                     <li>
@@ -321,7 +324,7 @@
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<img class="icon-small" src="assets/images/icons/holiday-tree.png" /> Asia
+										<i class="sprite sprite-holiday-tree"></i> Asia
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>

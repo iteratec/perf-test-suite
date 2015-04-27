@@ -98,7 +98,7 @@ li{list-style-type: none;}
 	width:	15px;
 }
 
-.carousel-control.left img, .carousel-control.right img, .sprite-chevron-left, .sprite-chevron-right {
+.carousel-control.left img, .carousel-control.right img, .carousel-control.left i, .carousel-control.right i {
 	margin-top: -15px;
 	right: 50%;
 	margin-right: -10px;
@@ -112,4 +112,13 @@ li{list-style-type: none;}
 	height:	15px !important;
 	width:	15px !important;
 	display: inline-block !important;
+}
+
+.navbar-toggle i {
+	color: #fff;
+	font-size: 25px;
+}
+
+.ratings i, .caption i {
+	color:	#000;
 }
