@@ -30,7 +30,7 @@
         
         //simulate server side processing time
         $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
-		if($sleep && $sleep.is_int()) sleep($sleep);
+		if($sleep && ctype_digit(strval($sleep))) sleep($sleep);
     ?>
 
     <!-- Navigation -->

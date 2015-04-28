@@ -1,7 +1,7 @@
 {
 	"common":{
 		"chunked_encoding_block":"",
-		"sleep_block":"$sleep = (isset($_GET[\"sleep\"]) ? $_GET[\"sleep\"] : 0);\n\t\tif($sleep && $sleep.is_int()) sleep($sleep);",
+		"sleep_block":"$sleep = (isset($_GET[\"sleep\"]) ? $_GET[\"sleep\"] : 0);\n\t\tif($sleep && ctype_digit(strval($sleep))) sleep($sleep);",
 		"js_folder":"js",
 		"css_folder":"assets/css",
 		"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
