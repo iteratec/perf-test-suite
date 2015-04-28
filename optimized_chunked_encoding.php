@@ -48,7 +48,7 @@
 		flush();
         //simulate server side processing time
         $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
-		if($sleep && $sleep.is_int()) sleep($sleep);
+		if($sleep && ctype_digit(strval($sleep))) sleep($sleep);
     ?>
 
     <!-- Navigation -->
@@ -66,33 +66,39 @@
 
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
-                    <li>
-                        <a  href="index.php">Home</a>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Optimizations <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a class="selected" href="optimized_chunked_encoding.php">Chunked encodig</a>
+                        </li>
+                        <li>
+                            <a  href="optimized_css_sprites.php">CSS Sprites</a>
+                        </li>
+                        <li>
+                            <a  href="optimized_font_awesome.php">Font Awesome</a>
+                        </li>
+                        <li>
+                            <a  href="optimized_minified.php">Minified Resources</a>
+                        </li>
+                        <li>
+                            <a  href="optimized_pictureload.php">Postload images</a>
+                        </li>
+                        <li>
+                            <a  href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
+                        </li>
+                        <li>
+                            <a  href="optimized_images.php">Optimized images</a>
+                        </li>
+                        <!-- we should add an about page
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        -->
+                      </ul>
                     </li>
-                    <li>
-                        <a class="selected" href="optimized_chunked_encoding.php">Chunked encodig</a>
-                    </li>
-                    <li>
-                        <a  href="optimized_css_sprites.php">CSS Sprites</a>
-                    </li>
-                    <li>
-                        <a  href="optimized_font_awesome.php">Font Awesome</a>
-                    </li>
-                    <li>
-                        <a  href="optimized_minified.php">Minified Resources</a>
-                    </li>
-                    <li>
-                        <a  href="optimized_pictureload.php">Postload images</a>
-                    </li>
-                    <li>
-                        <a <a <a  href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
-                    </li>
-                    <!-- we should add an about page
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    -->
               </ul>
+              <p class="navbar-text">optimized_chunked_encoding.php</p>
             </nav>
             <!-- /.navbar-collapse -->
         </div>
