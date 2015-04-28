@@ -43,9 +43,7 @@
 <body>
 
     <?php
-        if (ob_get_level() == 0) ob_start();
-		ob_flush();
-		flush();
+        
         //simulate server side processing time
         $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
 		if($sleep && $sleep.is_int()) sleep($sleep);
@@ -70,7 +68,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Optimizations <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a class="selected" href="optimized_chunked_encoding.php">Chunked encodig</a>
+                            <a  href="optimized_chunked_encoding.php">Chunked encodig</a>
                         </li>
                         <li>
                             <a  href="optimized_css_sprites.php">CSS Sprites</a>
@@ -88,7 +86,7 @@
                             <a  href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
                         </li>
                         <li>
-                            <a  href="optimized_images.php">Optimized images</a>
+                            <a class="selected" href="optimized_images.php">Optimized images</a>
                         </li>
                         <!-- we should add an about page
                         <li>
@@ -98,7 +96,7 @@
                       </ul>
                     </li>
               </ul>
-              <p class="navbar-text">optimized_chunked_encoding.php</p>
+              <p class="navbar-text">optimized_images.php</p>
             </nav>
             <!-- /.navbar-collapse -->
         </div>
@@ -124,19 +122,19 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="slide-image" src="assets/images/country-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets/images_optimized/country-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/boat-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets/images_optimized/boat-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/snow-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets/images_optimized/snow-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/beach-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets/images_optimized/beach-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" src="assets/images/glass-building-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets/images_optimized/glass-building-1170x400.jpeg" alt="">
                             </div>
                         </div>
                         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -155,7 +153,7 @@
             <div class="col-md-9 box-center">
                 <blockquote>
                     <div class="col-sm-3 text-center">
-                        <img class="img-circle" style="width: 100px;height:100px;" src="assets/images/person_3.png">
+                        <img class="img-circle" style="width: 100px;height:100px;" src="assets/images_optimized/person_3.png">
                     </div>
                     <div class="col-sm-9">
                         <p>
@@ -174,9 +172,9 @@
                 <h3><small>Recent Bookings</small></h3>
                 <ul class="thumbnails">
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/rila.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/rila.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Rila mountain, Bulgaria" src="assets/images/rila_small.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Rila mountain, Bulgaria" src="assets/images_optimized/rila_small.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -199,9 +197,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/varna_panorama.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/varna_panorama.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Varna" src="assets/images/varna.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Varna" src="assets/images_optimized/varna.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -225,9 +223,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/tsarevets.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/tsarevets.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images_optimized/tsarevets_small.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -250,9 +248,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/london.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/london.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images_optimized/london.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -275,9 +273,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/cibeles.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/cibeles.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images_optimized/cibeles_small.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -300,9 +298,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/recife.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_1.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images_optimized/recife_small_1.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -325,9 +323,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images_optimized/tree.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -350,9 +348,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images_optimized/san-fran.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -375,9 +373,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images_optimized/cheetah.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -400,9 +398,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/tsarevets.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/tsarevets.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images/tsarevets_small_2.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets/images_optimized/tsarevets_small_2.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
@@ -425,9 +423,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/london.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/london.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images/london_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets/images_optimized/london_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">London</a></h4>
@@ -446,9 +444,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/cibeles.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/cibeles.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images/cibeles_small_2.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets/images_optimized/cibeles_small_2.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
@@ -467,9 +465,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/recife.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_2.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images_optimized/recife_small_2.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -488,9 +486,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images_optimized/tree_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -509,9 +507,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images_optimized/san-fran_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -530,9 +528,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_2.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images_optimized/cheetah_2.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -551,9 +549,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/recife.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_3.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images_optimized/recife_small_3.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -572,9 +570,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_3.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images_optimized/tree_3.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -593,9 +591,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_3.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images_optimized/san-fran_3.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -614,9 +612,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_3.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images_optimized/cheetah_3.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -635,9 +633,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/recife.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_4.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images_optimized/recife_small_4.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -656,9 +654,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_4.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images_optimized/tree_4.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -677,9 +675,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_4.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images_optimized/san-fran_4.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -698,9 +696,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_4.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images_optimized/cheetah_4.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>
@@ -719,9 +717,9 @@
                         </div>
 					</li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/recife.jpg">
+                        <div class="thumbnail" href="assets/images_optimized/recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images/recife_small_5.jpg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets/images_optimized/recife_small_5.jpg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Recife, Brasil</a></h4>
@@ -740,9 +738,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/tree.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images/tree_5.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets/images_optimized/tree_5.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Asia</a></h4>
@@ -761,9 +759,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/san-fran.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images/san-fran_5.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets/images_optimized/san-fran_5.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">San Francisco</a></h4>
@@ -782,9 +780,9 @@
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="assets/images/cheetah.jpeg">
+                        <div class="thumbnail" href="assets/images_optimized/cheetah.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images/cheetah_5.jpeg">
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets/images_optimized/cheetah_5.jpeg">
                             </a>
                             <div class="caption">
                                 <h4><a href="javascript:;">Africa</a></h4>

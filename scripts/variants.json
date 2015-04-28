@@ -23,7 +23,8 @@
 		"icon_holiday_beach": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-beach.png\" />",
 		"icon_holiday_tree": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-tree.png\" />",
 		"icon_holiday_car": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-car.png\" />",
-		"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-animals.png\" />"
+		"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets/images/icons/holiday-animals.png\" />",
+		"image_folder_name": "assets/images/"
 	},
 	"variants": [
 		{
@@ -95,16 +96,15 @@
 			"javascripts_head":"",
 		},
 		{
-			"_comment": "javascripts get loaded at the end of the body",
-			"name": "optimized_javascripts_end_of_body.php",
-			"javascripts_end_body":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
-			"javascripts_head":"",
-		},
-		{
 			"_comment": "all javascripts and stylesheet are combined into single files",
 			"name": "optimized_combined_javascript_css.php",
 			"stylesheets":"<link href=\"assets/css/public_all.css\" rel=\"stylesheet\">",
 			"javascripts_head":"<script src=\"js/public_all.js\"></script>"
+		},
+		{
+			"_comment": "all jpegs are lossy compressed with 85% and afterwards optimized lossless via tools like https://imageoptim.com/ or http://trimage.org/",
+			"name": "optimized_images.php",
+			"image_folder_name": "assets/images_optimized/"
 		}
 	]
 }
