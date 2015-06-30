@@ -88,6 +88,9 @@
                         <li>
                             <a  href="optimized_images.php">Optimized images</a>
                         </li>
+                        <li>
+                            <a  href="optimized_caching_headers.php">Sensible caching headers</a>
+                        </li>
                         <!-- we should add an about page
                         <li>
                             <a href="about.html">About</a>
