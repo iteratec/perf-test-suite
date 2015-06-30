@@ -11,7 +11,7 @@
     <title>perf-test-suite</title>
 
     <!-- Bootstrap Core CSS -->
-	<link href="assets/css/bootstrap.css?enable-caching=true" rel="stylesheet">
+	<link href="assets-cache-enabled/css/bootstrap.css" rel="stylesheet">
 	<!-- Jquery Magnific popup css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
 	<!-- icons -->
