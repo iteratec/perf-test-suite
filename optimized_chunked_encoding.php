@@ -94,7 +94,7 @@
                             <a  href="optimized_caching_headers.php">Sensible caching headers</a>
                         </li>
                         <li>
-                            <a  href="optimized_compression_enabled.php">Provide static  headers</a>
+                            <a  href="optimized_compression_enabled.php">Compression enabled</a>
                         </li>
                         <!-- we should add an about page
                         <li>
