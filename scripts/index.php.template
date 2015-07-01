@@ -74,6 +74,9 @@
                         <li>
                             <a <%= out << (name.equals('optimized_caching_headers.php') ? "class=\"selected\"" : "");return "" %> href="optimized_caching_headers.php">Sensible caching headers</a>
                         </li>
+                        <li>
+                            <a <%= out << (name.equals('optimized_compression_enabled.php') ? "class=\"selected\"" : "");return "" %> href="optimized_compression_enabled.php">Provide static  headers</a>
+                        </li>
                         <!-- we should add an about page
                         <li>
                             <a href="about.html">About</a>
@@ -374,7 +377,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" <%= data_prefix_pictureload %>src="<%= image_folder_name %>london_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">London</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_travel %> London
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -391,7 +398,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cibeles_small_2.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_sun %> Cibeles, Madrid, Spain
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -408,7 +419,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_2.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_beach %> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -425,7 +440,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_tree %> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -442,7 +461,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_car %> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -459,7 +482,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_nature %> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -476,7 +503,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_3.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_beach %> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -493,7 +524,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_3.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_tree %> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -510,7 +545,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_3.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_car %> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -527,7 +566,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_3.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_nature %> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -544,7 +587,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_4.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_beach %> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -561,7 +608,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_4.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_tree %> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -578,7 +629,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_4.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_car %> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -595,7 +650,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_4.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_nature %> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -612,7 +671,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_5.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_beach %> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -629,7 +692,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_5.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_tree %> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -646,7 +713,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_5.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_car %> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -663,7 +734,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_5.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <%= icon_holiday_nature %> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">

@@ -129,6 +129,30 @@
 			"icon_holiday_car": "<img class=\"icon-small\" src=\"assets-compression-disabled/images/icons/holiday-car.png\" />",
 			"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets-compression-disabled/images/icons/holiday-animals.png\" />",
 			"image_folder_name": "assets-compression-disabled/images/"
+		},
+		{
+			"_comment": "all static assets with compression enabled (gzip)",
+			"name": "optimized_compression_enabled.php",
+			"js_folder":"assets-cache-disabled/js",
+			"css_folder":"assets-cache-disabled/css",
+			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"js/jquery-1.11.0.js\"></script>\n\t<script src=\"js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"js/bootstrap.js\"></script>\n\t<script src=\"js/jquery.magnific-popup.js\"></script>\n\t<script src=\"js/shuffle.js\"></script>\n\t<script src=\"js/jquery.shapeshift.js\"></script>\n\t<script src=\"js/homepage.js\"></script>",
+			"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets-cache-disabled/css/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-disabled/css/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-disabled/css/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets-cache-disabled/css/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets-cache-disabled/css/main.css\" rel=\"stylesheet\">",
+			"img_small_bars": "<img src=\"assets-cache-disabled/images/icons/bars.png\" />",
+			"img_small_chevron_left": "<img src=\"assets-cache-disabled/images/icons/chevron-left.png\" />",
+			"img_small_chevron_right": "<img src=\"assets-cache-disabled/images/icons/chevron-right.png\" />",
+			"img_small_quote_left": "<img src=\"assets-cache-disabled/images/icons/quote-left.png\" />",
+			"img_small_quote_right": "<img src=\"assets-cache-disabled/images/icons/quote-right.png\" />",
+			"icon_block": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/star.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/star.png\" />",
+			"icon_holiday_mountain": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-mountain.png\" />",
+			"icon_holiday_town": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-town.png\" />",
+			"icon_holiday_nature": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-nature.png\" />",
+			"icon_holiday_travel": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-travel.png\" />",
+			"icon_holiday_sun": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-sun.png\" />",
+			"icon_holiday_beach": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-beach.png\" />",
+			"icon_holiday_tree": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-tree.png\" />",
+			"icon_holiday_car": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-car.png\" />",
+			"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-animals.png\" />",
+			"image_folder_name": "assets-cache-disabled/images/"
 		}
 	]
 }

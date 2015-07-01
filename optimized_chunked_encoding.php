@@ -93,6 +93,9 @@
                         <li>
                             <a  href="optimized_caching_headers.php">Sensible caching headers</a>
                         </li>
+                        <li>
+                            <a  href="optimized_compression_enabled.php">Provide static  headers</a>
+                        </li>
                         <!-- we should add an about page
                         <li>
                             <a href="about.html">About</a>
@@ -433,7 +436,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets-cache-and-compression-disabled/images/london_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">London</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-travel.png" /> London
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -454,7 +461,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets-cache-and-compression-disabled/images/cibeles_small_2.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Cibeles, Madrid, Spain</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-sun.png" /> Cibeles, Madrid, Spain
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -475,7 +486,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets-cache-and-compression-disabled/images/recife_small_2.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-beach.png" /> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -496,7 +511,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets-cache-and-compression-disabled/images/tree_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-tree.png" /> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -517,7 +536,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets-cache-and-compression-disabled/images/san-fran_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-car.png" /> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -538,7 +561,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets-cache-and-compression-disabled/images/cheetah_2.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-nature.png" /> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -559,7 +586,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets-cache-and-compression-disabled/images/recife_small_3.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-beach.png" /> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -580,7 +611,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets-cache-and-compression-disabled/images/tree_3.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-tree.png" /> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -601,7 +636,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets-cache-and-compression-disabled/images/san-fran_3.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-car.png" /> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -622,7 +661,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets-cache-and-compression-disabled/images/cheetah_3.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-nature.png" /> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -643,7 +686,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets-cache-and-compression-disabled/images/recife_small_4.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-beach.png" /> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -664,7 +711,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets-cache-and-compression-disabled/images/tree_4.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-tree.png" /> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -685,7 +736,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets-cache-and-compression-disabled/images/san-fran_4.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-car.png" /> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -706,7 +761,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets-cache-and-compression-disabled/images/cheetah_4.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-nature.png" /> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -727,7 +786,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets-cache-and-compression-disabled/images/recife_small_5.jpg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Recife, Brasil</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-beach.png" /> Recife, Brasil
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -748,7 +811,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets-cache-and-compression-disabled/images/tree_5.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Asia</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-tree.png" /> Asia
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -769,7 +836,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets-cache-and-compression-disabled/images/san-fran_5.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">San Francisco</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-car.png" /> San Francisco
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
@@ -790,7 +861,11 @@
                                 <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets-cache-and-compression-disabled/images/cheetah_5.jpeg">
                             </a>
                             <div class="caption">
-                                <h4><a href="javascript:;">Africa</a></h4>
+                                <h4>
+                                    <a href="javascript:;">
+                                        <img class="icon-small" src="assets-cache-and-compression-disabled/images/icons/holiday-nature.png" /> Africa
+                                    </a>
+                                </h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
