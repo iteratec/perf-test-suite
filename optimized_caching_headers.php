@@ -29,14 +29,14 @@
     <![endif]-->
 
     <!-- jQuery Version 1.11.0 -->
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/jquery-ui.js"></script>
+	<script src="assets-compression-disabled/js/jquery-1.11.0.js"></script>
+	<script src="assets-compression-disabled/js/jquery-ui.js"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.js"></script>
-	<script src="js/jquery.magnific-popup.js"></script>
-	<script src="js/shuffle.js"></script>
-	<script src="js/jquery.shapeshift.js"></script>
-	<script src="js/homepage.js"></script>
+	<script src="assets-compression-disabled/js/bootstrap.js"></script>
+	<script src="assets-compression-disabled/js/jquery.magnific-popup.js"></script>
+	<script src="assets-compression-disabled/js/shuffle.js"></script>
+	<script src="assets-compression-disabled/js/jquery.shapeshift.js"></script>
+	<script src="assets-compression-disabled/js/homepage.js"></script>
 
 </head>
 
