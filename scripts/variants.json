@@ -1,4 +1,40 @@
 {
+	"README": 
+	"This object is used to create the different variants of the homepage: 
+	1) For all objects in list variants the variant specific attributes get merged with attributes in object common.
+	2) All keys in resulting map contained in superAttributes get pre-processed: They contain inner attributes that get replaced before main template processing.
+	3) Resulting map is used for main templating",
+	"superAttributes":{
+		"image_cibeles": ["data_prefix_pictureload", "image_folder_name"],
+		"image_rila": ["data_prefix_pictureload", "image_folder_name"],
+		"image_varna": ["data_prefix_pictureload", "image_folder_name"],
+		"image_tzarevets": ["data_prefix_pictureload", "image_folder_name"],
+		"image_london": ["data_prefix_pictureload", "image_folder_name"],
+		"image_recife": ["data_prefix_pictureload", "image_folder_name"],
+		"image_asia": ["data_prefix_pictureload", "image_folder_name"],
+		"image_sanfran": ["data_prefix_pictureload", "image_folder_name"],
+		"image_africa": ["data_prefix_pictureload", "image_folder_name"],
+		"image_louvre": ["data_prefix_pictureload", "image_folder_name"],
+		"image_cityview": ["data_prefix_pictureload", "image_folder_name"],
+		"image_finland": ["data_prefix_pictureload", "image_folder_name"],
+		"image_duck": ["data_prefix_pictureload", "image_folder_name"],
+		"image_france": ["data_prefix_pictureload", "image_folder_name"],
+		"image_artgallery": ["data_prefix_pictureload", "image_folder_name"],
+		"image_beginningoflife": ["data_prefix_pictureload", "image_folder_name"],
+		"image_cherryblossom": ["data_prefix_pictureload", "image_folder_name"],
+		"image_coffecentral": ["data_prefix_pictureload", "image_folder_name"],
+		"image_frankfurtwaters": ["data_prefix_pictureload", "image_folder_name"],
+		"image_manmadeskies": ["data_prefix_pictureload", "image_folder_name"],
+		"image_oldlove": ["data_prefix_pictureload", "image_folder_name"],
+		"image_ungodlyskies": ["data_prefix_pictureload", "image_folder_name"],
+		"image_windyday": ["data_prefix_pictureload", "image_folder_name"],
+		"image_skyandbuilding": ["data_prefix_pictureload", "image_folder_name"],
+		"image_tromboneplayer": ["data_prefix_pictureload", "image_folder_name"],
+		"image_wasp": ["data_prefix_pictureload", "image_folder_name"],
+		"image_catcherintherye": ["data_prefix_pictureload", "image_folder_name"],
+		"image_oldcaddy": ["data_prefix_pictureload", "image_folder_name"],
+		"image_oneway": ["data_prefix_pictureload", "image_folder_name"],
+	},
 	"common":{
 		"chunked_encoding_block":"",
 		"sleep_block":"$sleep = (isset($_GET[\"sleep\"]) ? $_GET[\"sleep\"] : 0);\n\t\tif($sleep && ctype_digit(strval($sleep))) sleep($sleep);",
@@ -24,8 +60,38 @@
 		"icon_holiday_tree": "<img class=\"icon-small\" src=\"assets-cache-and-compression-disabled/images/icons/holiday-tree.png\" />",
 		"icon_holiday_car": "<img class=\"icon-small\" src=\"assets-cache-and-compression-disabled/images/icons/holiday-car.png\" />",
 		"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets-cache-and-compression-disabled/images/icons/holiday-animals.png\" />",
-		"image_folder_name": "assets-cache-and-compression-disabled/images/"
+		"image_folder_name": "assets-cache-and-compression-disabled/images/",
+		"image_cibeles": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Cibeles, Madrid, Spain\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>cibeles_small_2.jpg\">",
+		"image_rila": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Rila mountain, Bulgaria\" src=\"<%= image_folder_name %>rila_small.jpg\">",
+		"image_varna": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Varna\" src=\"<%= image_folder_name %>varna.jpeg\">",
+		"image_tzarevets": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Tzarevets, Veliko Tarnvo, Bulgaria\" src=\"<%= image_folder_name %>tsarevets_small.jpg\">",
+		"image_london": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"London\" src=\"<%= image_folder_name %>london.jpeg\">",
+		"image_recife": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Recife, Brasil\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>recife_small_1.jpg\">",
+		"image_asia": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Asia\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>tree.jpeg\">",
+		"image_sanfran": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"San Francisco\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>san-fran.jpeg\">",
+		"image_africa": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Cheetah\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>cheetah.jpeg\">",
+		"image_louvre": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Louvre\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>louvre.jpg\">",
+		"image_cityview": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Cityview\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>cityview.jpeg\">",
+		"image_finland": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Finland\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>finland_small.jpg\">",
+		"image_duck": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Flying duck\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>flying-duck.jpeg\">",
+		"image_france": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"France\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>france.jpg\">",
+		"image_artgallery": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Art gallery\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>art-gallery.jpg\">",
+		"image_beginningoflife": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Beginning of life\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>beginning-of-life.jpg\">",
+		"image_cherryblossom": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Cherry blossom\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>cherry-blossom.jpg\">",
+		"image_coffecentral": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Coffee central\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>coffee-central.jpg\">",
+		"image_frankfurtwaters": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Frankfurt waters\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>frankfurt-waters.jpg\">",
+		"image_manmadeskies": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Man made skies\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>man-made-skies.jpg\">",
+		"image_oldlove": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Old love\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>old-love.jpg\">",
+		"image_ungodlyskies": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Ungodly skies\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>ungodly-skies.jpg\">",
+		"image_windyday": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Windy day\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>windy-day.jpg\">",
+		"image_skyandbuilding": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Sky and building\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>sky-and-building.jpg\">",
+		"image_tromboneplayer": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Trombone_player\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>trombone_player.jpg\">",
+		"image_wasp": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Wasp\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>wasp.jpg\">",
+		"image_catcherintherye": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Catcher in the rye\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>catcher-in-the-rye.jpg\">",
+		"image_oldcaddy": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Old caddy\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>old-caddy.jpg\">",
+		"image_oneway": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"One way only\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>oneway.jpg\">"
 	},
+
 	"variants": [
 		{
 			"_comment": "completely unoptimized index.php",
@@ -153,6 +219,36 @@
 			"icon_holiday_car": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-car.png\" />",
 			"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets-cache-disabled/images/icons/holiday-animals.png\" />",
 			"image_folder_name": "assets-cache-disabled/images/"
+		},
+		{
+			"_comment": "all jpegs are lossy compressed with 85% and afterwards optimized lossless via tools like https://imageoptim.com/ or http://trimage.org/",
+			"name": "optimized_images.php",
+			"image_folder_name": "assets-cache-and-compression-disabled/images_optimized/"
+		},
+		{
+			"_comment": "",
+			"name": "optimized_rwd_avoid_loading_hidden_images.php",
+			"image_africa": "<div class=\"attachment-portfolio-full wp-post-image with-africa-background\" alt=\"Cheetah\"></div>",
+			"image_louvre": "<div class=\"attachment-portfolio-full wp-post-image with-louvre-background\"  alt=\"Louvre\"></div>",
+			"image_cityview": "<div class=\"attachment-portfolio-full wp-post-image with-cityview-background\"  alt=\"Cityview\"></div>",
+			"image_finland": "<div class=\"attachment-portfolio-full wp-post-image with-finland-background\"  alt=\"Finland\"></div>",
+			"image_duck": "<div class=\"attachment-portfolio-full wp-post-image with-duck-background\"  alt=\"Flying duck\"></div>",
+			"image_france": "<div class=\"attachment-portfolio-full wp-post-image with-france-background\"  alt=\"France\"></div>",
+			"image_artgallery": "<div class=\"attachment-portfolio-full wp-post-image with-artgallery-background\"  alt=\"Art gallery\"></div>",
+			"image_beginningoflife": "<div class=\"attachment-portfolio-full wp-post-image with-beginningoflife-background\"  alt=\"Beginning of life\"></div>",
+			"image_cherryblossom": "<div class=\"attachment-portfolio-full wp-post-image with-cherryblossom-background\"  alt=\"Cherry blossom\"></div>",
+			"image_coffecentral": "<div class=\"attachment-portfolio-full wp-post-image with-coffee-background\"  alt=\"Coffee central\"></div>",
+			"image_frankfurtwaters": "<div class=\"attachment-portfolio-full wp-post-image with-frankfurtwaters-background\"  alt=\"Frankfurt waters\"></div>",
+			"image_manmadeskies": "<div class=\"attachment-portfolio-full wp-post-image with-manmadeskies-background\"  alt=\"Man made skies\"></div>",
+			"image_oldlove": "<div class=\"attachment-portfolio-full wp-post-image with-oldlove-background\"  alt=\"Old love\"></div>",
+			"image_ungodlyskies": "<div class=\"attachment-portfolio-full wp-post-image with-ungodlyskies-background\"  alt=\"Ungodly skies\"></div>",
+			"image_windyday": "<div class=\"attachment-portfolio-full wp-post-image with-windyday-background\"  alt=\"Windy day\"></div>",
+			"image_skyandbuilding": "<div class=\"attachment-portfolio-full wp-post-image with-skyandbuilding-background\"  alt=\"Sky and building\"></div>",
+			"image_tromboneplayer": "<div class=\"attachment-portfolio-full wp-post-image with-tromboneplayer-background\"  alt=\"Trombone_player\"></div>",
+			"image_wasp": "<div class=\"attachment-portfolio-full wp-post-image with-wasp-background\"  alt=\"Wasp\"></div>",
+			"image_catcherintherye": "<div class=\"attachment-portfolio-full wp-post-image with-ryecatcher-background\"  alt=\"Catcher in the rye\"></div>",
+			"image_oldcaddy": "<div class=\"attachment-portfolio-full wp-post-image with-oldcaddy-background\"  alt=\"Old caddy\"></div>",
+			"image_oneway": "<div class=\"attachment-portfolio-full wp-post-image with-oneway-background\"  alt=\"One way only\"></div>"
 		}
 	]
 }

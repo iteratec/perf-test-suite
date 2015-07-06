@@ -122,3 +122,59 @@ li{list-style-type: none;}
 .ratings i, .caption i {
 	color:	#000;
 }
+
+/**
+* Set further images invisible on smaller screens (mobile).
+*/
+@media screen and (max-width: 992px) {
+    .only-visible-on-desktop {
+        display: none;
+    }
+}
+/**
+* Load further images on larger screens (desktop).
+*/
+@media screen and (min-width: 992px) {
+
+    .with-cibeles-background {background-image: url(../images/cibeles_small_2.jpg);}
+    .with-rila-background {background-image: url(../images/rila_small.jpg);}
+    .with-varna-background {background-image: url(../images/varna.jpeg);}
+    .with-tzarevets-background {background-image: url(../images/tsarevets_small.jpg);}
+    .with-london-background {background-image: url(../images/london.jpeg);}
+    .with-recife-background {background-image: url(../images/recife_small_1.jpg);}
+    .with-asia-background {background-image: url(../images/tree.jpeg);}
+    .with-sanfran-background {background-image: url(../images/san-fran.jpeg);}
+    .with-africa-background {background-image: url(../images/cheetah.jpeg);}
+    .with-louvre-background {background-image: url(../images/louvre.jpg);}
+    .with-cityview-background {background-image: url(../images/cityview.jpeg);}
+    .with-finland-background {background-image: url(../images/finland_small.jpg);}
+    .with-duck-background {background-image: url(../images/flying-duck.jpeg);}
+    .with-france-background {background-image: url(../images/france.jpg);}
+    .with-artgallery-background {background-image: url(../images/art-gallery.jpg);}
+    .with-beginningoflife-background {background-image: url(../images/beginning-of-life.jpg);}
+    .with-cherryblossom-background {background-image: url(../images/cherry-blossom.jpg);}
+    .with-coffee-background {background-image: url(../images/coffee-central.jpg);}
+    .with-frankfurtwaters-background {background-image: url(../images/frankfurt-waters.jpg);}
+    .with-manmadeskies-background {background-image: url(../images/man-made-skies.jpg);}
+    .with-oldlove-background {background-image: url(../images/old-love.jpg);}
+    .with-ungodlyskies-background {background-image: url(../images/ungodly-skies.jpg);}
+    .with-windyday-background {background-image: url(../images/windy-day.jpg);}
+    .with-skyandbuilding-background {background-image: url(../images/sky-and-building.jpg);}
+    .with-tromboneplayer-background {background-image: url(../images/trombone_player.jpg);}
+    .with-wasp-background {background-image: url(../images/wasp.jpg);}
+    .with-ryecatcher-background {background-image: url(../images/catcher-in-the-rye.jpg);}
+    .with-oldcaddy-background {background-image: url(../images/old-caddy.jpg);}
+    .with-oneway-background {background-image: url(../images/oneway.jpg);}
+
+    /**
+    * Realizes a fluid, scalable background-image
+    * @see http://www.outsidethebracket.com/responsive-web-design-fluid-background-images/
+    */
+    div[class$=background]{
+        width:100%;
+        padding-bottom: 66.666666666667%; /* width / height */
+        background-size: cover;
+        background-position:center; /* IE fix */
+    }
+
+}

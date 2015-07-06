@@ -77,6 +77,9 @@
                         <li>
                             <a <%= out << (name.equals('optimized_compression_enabled.php') ? "class=\"selected\"" : "");return "" %> href="optimized_compression_enabled.php">Compression enabled</a>
                         </li>
+                        <li>
+                            <a <%= out << (name.equals('optimized_rwd_avoid_loading_hidden_images.php') ? "class=\"selected\"" : "");return "" %> href="optimized_rwd_avoid_loading_hidden_images.php">[RWD] Avoid loading hidden images</a>
+                        </li>
                         <!-- we should add an about page
                         <li>
                             <a href="about.html">About</a>
@@ -163,7 +166,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>rila.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Rila mountain, Bulgaria" src="<%= image_folder_name %>rila_small.jpg">
+                                <%= image_rila %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -184,7 +187,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>varna_panorama.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Varna" src="<%= image_folder_name %>varna.jpeg">
+                                <%= image_varna %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -206,7 +209,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>tsarevets.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="<%= image_folder_name %>tsarevets_small.jpg">
+                                <%= image_tzarevets %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -227,7 +230,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>london.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="<%= image_folder_name %>london.jpeg">
+                                <%= image_london %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -248,7 +251,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>cibeles.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cibeles_small.jpg">
+                                <%= image_cibeles %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -269,7 +272,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>recife.jpg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_1.jpg">
+                                <%= image_recife %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -290,7 +293,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>tree.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree.jpeg">
+                                <%= image_asia %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -311,7 +314,7 @@
                     <li class="col-md-3">
                         <div class="thumbnail" href="<%= image_folder_name %>san-fran.jpeg">
                             <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran.jpeg">
+                                <%= image_sanfran %>
                             </a>
                             <div class="caption">
                                 <h4>
@@ -329,426 +332,428 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>cheetah.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-									<a href="javascript:;">
-										<%= icon_holiday_nature %> Africa
-									</a>
-								</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                    <div class="only-visible-on-desktop">
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>cheetah.jpeg">
+                                <a href="javascript:;">
+                                    <%= image_africa %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+    									<a href="javascript:;">
+    										<%= icon_holiday_nature %> Africa
+    									</a>
+    								</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>louvre.jpg">
+                                <a href="javascript:;">
+                                    <%= image_louvre %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+    									<a href="javascript:;">
+    										<%= icon_holiday_animals %> Louvre, Paris, France
+    									</a>
+    								</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>28 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>tsarevets.jpg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tsarevets_small_2.jpg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-									<a href="javascript:;">
-										<%= icon_holiday_animals %> Tzarevets, Veliko Tarnovo, Bulgaria
-									</a>
-								</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>cityview.jpeg">
+                                <a href="javascript:;">
+                                    <%= image_cityview %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_travel %> Cityview
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>15 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>28 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>finland.jpg">
+                                <a href="javascript:;">
+                                    <%= image_finland %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_sun %> Finland
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>12 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>london.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" <%= data_prefix_pictureload %>src="<%= image_folder_name %>london_2.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_travel %> London
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>flying-duck.jpeg">
+                                <a href="javascript:;">
+                                    <%= image_duck %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_beach %> Flying duck
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>6 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>15 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>art-gallery.jpg">
+                                <a href="javascript:;">
+                                    <%= image_artgallery %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_tree %> Art gallery
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>31 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>cibeles.jpg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cibeles_small_2.jpg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_sun %> Cibeles, Madrid, Spain
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>beginning-of-life.jpg">
+                                <a href="javascript:;">
+                                    <%= image_beginningoflife %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_car %> Beginning of life
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>12 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>cherry-blossom.jpg">
+                                <a href="javascript:;">
+                                    <%= image_cherryblossom %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_nature %> Cherry blossom
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>recife.jpg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_2.jpg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_beach %> Recife, Brasil
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>coffee-central.jpg">
+                                <a href="javascript:;">
+                                    <%= image_coffecentral %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_beach %> Coffee
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>6 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>6 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>frankfurt-waters.jpg">
+                                <a href="javascript:;">
+                                    <%= image_frankfurtwaters %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_tree %> Frankfurt waters
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>31 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>tree.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_2.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_tree %> Asia
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>man-made-skies.jpg">
+                                <a href="javascript:;">
+                                    <%= image_manmadeskies %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_car %> Man made skies
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>31 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>old-love.jpg">
+                                <a href="javascript:;">
+                                    <%= image_oldlove %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_nature %> Old love
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>san-fran.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_2.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_car %> San Francisco
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>ungodly-skies.jpg">
+                                <a href="javascript:;">
+                                    <%= image_ungodlyskies %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_beach %> Ungodly skies
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>6 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>windy-day.jpg">
+                                <a href="javascript:;">
+                                    <%= image_windyday %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_tree %> Windy day
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>31 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>cheetah.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_2.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_nature %> Africa
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>sky-and-building.jpg">
+                                <a href="javascript:;">
+                                    <%= image_skyandbuilding %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_car %> Sky and building
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>trombone_player.jpg">
+                                <a href="javascript:;">
+                                    <%= image_tromboneplayer %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_nature %> Trombone player
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>recife.jpg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_3.jpg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_beach %> Recife, Brasil
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+    					</li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>wasp.jpg">
+                                <a href="javascript:;">
+                                    <%= image_wasp %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_beach %> Wasp
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>6 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>6 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>catcher-in-the-rye.jpg">
+                                <a href="javascript:;">
+                                    <%= image_catcherintherye %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_tree %> Catcher in the rye
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>31 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>tree.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_3.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_tree %> Asia
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>old-caddy.jpg">
+                                <a href="javascript:;">
+                                    <%= image_oldcaddy %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_car %> Old Caddy
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>31 reviews</p>
+                        </li>
+                        <li class="col-md-3">
+                            <div class="thumbnail" href="<%= image_folder_name %>oneway.jpg">
+                                <a href="javascript:;">
+                                    <%= image_oneway %>
+                                </a>
+                                <div class="caption">
+                                    <h4>
+                                        <a href="javascript:;">
+                                            <%= icon_holiday_nature %> One way only
+                                        </a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
+                                </div>
+                                <div class="ratings">
+                                    <p>
+    									<%= icon_block %>
+                                    </p>
+    								<p>0 reviews</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>san-fran.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_3.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_car %> San Francisco
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>cheetah.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_3.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_nature %> Africa
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>recife.jpg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_4.jpg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_beach %> Recife, Brasil
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>6 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>tree.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_4.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_tree %> Asia
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>31 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>san-fran.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_4.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_car %> San Francisco
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>cheetah.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_4.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_nature %> Africa
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
-                            </div>
-                        </div>
-					</li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>recife.jpg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" <%= data_prefix_pictureload %>src="<%= image_folder_name %>recife_small_5.jpg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_beach %> Recife, Brasil
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>6 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>tree.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" <%= data_prefix_pictureload %>src="<%= image_folder_name %>tree_5.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_tree %> Asia
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>31 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>san-fran.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" <%= data_prefix_pictureload %>src="<%= image_folder_name %>san-fran_5.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_car %> San Francisco
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>cheetah.jpeg">
-                            <a href="javascript:;">
-                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" <%= data_prefix_pictureload %>src="<%= image_folder_name %>cheetah_5.jpeg">
-                            </a>
-                            <div class="caption">
-                                <h4>
-                                    <a href="javascript:;">
-                                        <%= icon_holiday_nature %> Africa
-                                    </a>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
-                            </div>
-                            <div class="ratings">
-                                <p>
-									<%= icon_block %>
-                                </p>
-								<p>0 reviews</p>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
