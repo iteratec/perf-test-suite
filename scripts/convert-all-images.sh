@@ -6,11 +6,10 @@ IMAGES_OPTIMIZED=../assets/images_optimized/*.*
 for f in $IMAGES_ORIGINAL
 do
 	cp -f $f ../assets/images_optimized
-	#convert -quality 85% $f 
 done
 # compress all images
 for f in $IMAGES_OPTIMIZED
 do
 	echo "converting $f"
-	convert -quality 85% $f $f
+	convert -strip -quality 85% $f $f
 done
