@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body onload="PerfTestSuite.reportEvent();">
 
     <?php
         
@@ -895,6 +895,7 @@
 
     
 
+     <script type="text/javascript" src="assets/js/sendBeacon.js">
     <script src="assets-cache-and-compression-disabled/js/profiler.js"></script>
     <script>
         new __Profiler().init(document.getElementById('timingResult'));

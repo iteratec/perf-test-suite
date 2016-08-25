@@ -40,7 +40,7 @@
 
 </head>
 
-<body>
+<body onload="PerfTestSuite.reportEvent();">
 
     <?php
         if (ob_get_level() == 0) ob_start();
@@ -913,6 +913,7 @@
 
     
 
+     <script type="text/javascript" src="assets/js/sendBeacon.js">
     <script src="assets-cache-and-compression-disabled/js/profiler.js"></script>
     <script>
         new __Profiler().init(document.getElementById('timingResult'));
