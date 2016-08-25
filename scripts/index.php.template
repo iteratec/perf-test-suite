@@ -782,11 +782,7 @@
 
     <%= javascripts_end_body %>
 
-     <script type="text/javascript" src="assets/js/sendBeacon.js">
-    <script src="<%= js_folder %>/profiler.js"></script>
-    <script>
-        new __Profiler().init(document.getElementById('timingResult'));
-    </script>
+     <script type="text/javascript" src="assets/js/sendBeacon.js"></script>
 
 </body>
 
