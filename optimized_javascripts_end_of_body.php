@@ -32,7 +32,7 @@
 
 </head>
 
-<body onload="PerfTestSuite.reportEvent();">
+<body onload="BeaconReporter.sendBeacon(JSON.stringify({'time': performance.now()}));">
 
     <?php
         

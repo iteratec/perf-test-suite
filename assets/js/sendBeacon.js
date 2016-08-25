@@ -31,10 +31,11 @@
   }
 })(this);
 
-var PerfTestSuite = PerfTestSuite || {};
-PerfTestSuite.reportEvent = function() {
-  var data = JSON.stringify({
-    "time": performance.now()
-  });
-  navigator.sendBeacon('assets/images/beacon.jpg', data);
-}
+var BeaconReporter = (function(){
+  var beaconUrl = "assets/images/beacon.jpg";
+  return {
+    sendBeacon: function(data) {
+      navigator.sendBeacon(beaconUrl, data);
+    }
+  };
+ })();
