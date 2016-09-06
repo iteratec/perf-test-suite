@@ -1,0 +1,27 @@
+{
+  "name": "perf-test-suite",
+  "homepage": "https://github.com/IteraSpeed/perf-test-suite",
+  "authors": [
+    "Nils Kuhn <nils.kuhn@iteratec.de>"
+  ],
+  "description": "fake application to test and demonstrate web performance issues",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "web",
+    "performance",
+    "test"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine-core": "jasmine#~2.5.0"
+  }
+}

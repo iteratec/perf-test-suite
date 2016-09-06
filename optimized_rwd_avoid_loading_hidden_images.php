@@ -40,7 +40,7 @@
 
 </head>
 
-<body onload="BeaconReporter.sendBeacon(JSON.stringify({'time': performance.now()}));">
+<body onload="RumReporter.sendBeacon({time: performance.now()});">
 
     <?php
         

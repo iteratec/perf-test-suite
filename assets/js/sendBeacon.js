@@ -31,11 +31,36 @@
   }
 })(this);
 
-var BeaconReporter = (function(){
-  var beaconUrl = "assets/images/beacon.jpg";
-  return {
-    sendBeacon: function(data) {
-      navigator.sendBeacon(beaconUrl, data);
+var RumReporter = (function(){
+  "use strict";
+  var beaconBaseUrl = "assets/images/beacon.jpg";
+
+  function getDataAppendedUrl(data){
+    var dataAppendedUrl = getBeaconBaseUrl().match(/\?$/g) ? getBeaconBaseUrl() : getBeaconBaseUrl() + "?"
+    for (var metricName in data) {
+      dataAppendedUrl += encodeURI(metricName) + "=" + encodeURI(data[metricName]) + "&";
     }
+    return dataAppendedUrl.match(/\&$/g) ? dataAppendedUrl.substring(0, dataAppendedUrl.length-1) : dataAppendedUrl;
+  }
+  function sendBeacon(data){
+    try {
+      if (Object.keys(data).length > 0) {
+        navigator.sendBeacon(getDataAppendedUrl(data), JSON.stringify(data));
+      }
+    } catch (e) {
+      console.log("An exception occurred trying to send user timing metric via beacon api: " + e.message + " IN " + e.sourceURL + ": " + e.line)
+    }
+  }
+  function setBeaconBaseUrl(beaconUrl){
+    beaconBaseUrl = beaconUrl;
+  }
+  function getBeaconBaseUrl(){
+    return beaconBaseUrl;
+  }
+
+  return {
+    sendBeacon: sendBeacon,
+    setBeaconBaseUrl: setBeaconBaseUrl,
+    getBeaconBaseUrl: getBeaconBaseUrl
   };
  })();
