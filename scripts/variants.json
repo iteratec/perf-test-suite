@@ -1,6 +1,6 @@
 {
-	"README": 
-	"This object is used to create the different variants of the homepage: 
+	"README":
+	"This object is used to create the different variants of the homepage:
 	1) For all objects in list variants the variant specific attributes get merged with attributes in object common.
 	2) All keys in resulting map contained in superAttributes get pre-processed: They contain inner attributes that get replaced before main template processing.
 	3) Resulting map is used for main templating",
@@ -40,7 +40,7 @@
 		"sleep_block":"$sleep = (isset($_GET[\"sleep\"]) ? $_GET[\"sleep\"] : 0);\n\t\tif($sleep && ctype_digit(strval($sleep))) sleep($sleep);",
 		"js_folder":"assets-cache-and-compression-disabled/js",
 		"css_folder":"assets-cache-and-compression-disabled/css",
-		"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-and-compression-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/homepage.js\"></script>",
+		"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-and-compression-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/homepage.js\"></script>\n\t<script src=\"assets-old-path/js/heavy_lifting.js\"></script>",
 		"javascripts_end_body":"",
 		"data_prefix_pictureload": "",
 		"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets-cache-and-compression-disabled/css/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-and-compression-disabled/css/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-and-compression-disabled/css/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets-cache-and-compression-disabled/css/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets-cache-and-compression-disabled/css/main.css\" rel=\"stylesheet\">",
@@ -61,6 +61,7 @@
 		"icon_holiday_car": "<img class=\"icon-small\" src=\"assets-cache-and-compression-disabled/images/icons/holiday-car.png\" />",
 		"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets-cache-and-compression-disabled/images/icons/holiday-animals.png\" />",
 		"image_folder_name": "assets-cache-and-compression-disabled/images/",
+		"image_toggle":"",
 		"image_cibeles": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Cibeles, Madrid, Spain\" <%= data_prefix_pictureload %>src=\"<%= image_folder_name %>cibeles_small_2.jpg\">",
 		"image_rila": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Rila mountain, Bulgaria\" src=\"<%= image_folder_name %>rila_small.jpg\">",
 		"image_varna": "<img class=\"attachment-portfolio-full wp-post-image\" width=\"600\" height=\"400\" alt=\"Varna\" src=\"<%= image_folder_name %>varna.jpeg\">",
@@ -98,6 +99,59 @@
 			"name": "index.php",
 		},
 		{
+			"_comment": "completely unoptimized and a bit broken index.php",
+			"name": "index_broken.php",
+			"js_folder":"assets-old-path/js",
+			"css_folder":"assets-old-path/css",
+			"image_toggle":"_old_path",
+			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-old-path/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-old-path/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-old-path/js/bootstrap.js\"></script>\n\t<script src=\"assets-old-path/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-old-path/js/shuffle.js\"></script>\n\t<script src=\"assets-old-path/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-old-path/js/homepage.js\"></script>\n\t<script src=\"assets-old-path/js/heavy_lifting.js\"></script>",
+			"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets-old-path/css/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-old-path/css/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-old-path/css/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets-old-path/css/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets-old-path/css/main.css\" rel=\"stylesheet\">",
+			"img_small_bars": "<img src=\"assets-old-path/images/icons/bars.png\" />",
+			"img_small_chevron_left": "<img src=\"assets-old-path/images/icons/chevron-left.png\" />",
+			"img_small_chevron_right": "<img src=\"assets-old-path/images/icons/chevron-right.png\" />",
+			"img_small_quote_left": "<img src=\"assets-old-path/images/icons/quote-left.png\" />",
+			"img_small_quote_right": "<img src=\"assets-old-path/images/icons/quote-right.png\" />",
+			"icon_block": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star-filled.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star.png\" />\n\t\t\t\t\t\t\t\t\t<img class=\"icon-small\" src=\"assets/images/icons/star.png\" />",
+			"icon_holiday_mountain": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-mountain.png\" />",
+			"icon_holiday_town": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-town.png\" />",
+			"icon_holiday_nature": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-nature.png\" />",
+			"icon_holiday_travel": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-travel.png\" />",
+			"icon_holiday_sun": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-sun.png\" />",
+			"icon_holiday_beach": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-beach.png\" />",
+			"icon_holiday_tree": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-tree.png\" />",
+			"icon_holiday_car": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-car.png\" />",
+			"icon_holiday_animals": "<img class=\"icon-small\" src=\"assets-old-path/images/icons/holiday-animals.png\" />",
+			"image_folder_name": "assets-old-path/images/",
+
+		},
+		{
+			"_comment": "completely optimized",
+			"name": "optimized_all.php",
+			"js_folder":"assets/jsMinified",
+			"css_folder":"assets/cssMinified",
+			"chunked_encoding_block":"if (ob_get_level() == 0) ob_start();\n\t\tob_flush();\n\t\tflush();",
+			"javascripts_end_body":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets/js/bootstrap.js\"></script>\n\t<script src=\"assets/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets/js/shuffle.js\"></script>\n\t<script src=\"assets/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets/js/homepage.js\"></script>\n\t<script src=\"assets/js/heavy_lifting_window_load.js\"></script>\n\t<script src=\"assets/js/postPictureLoad.js\"></script>",
+			"javascripts_head":"",
+      "stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets/cssMinified/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/cssMinified/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/cssMinified/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets/cssMinified/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets/cssMinified/main.css\" rel=\"stylesheet\">",
+			"img_small_bars": "<i class=\"fa fa-bars\"></i>",
+			"img_small_chevron_left": "<i class=\"fa fa-chevron-left\"></i>",
+			"img_small_chevron_right": "<i class=\"fa fa-chevron-right\"></i>",
+			"img_small_quote_left": "<i class=\"fa fa-quote-left\"></i>",
+			"img_small_quote_right": "<i class=\"fa fa-quote-right\"></i>",
+			"icon_block": "<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\"></i>\n\t\t\t\t\t\t\t\t\t<i class=\"fa fa-star-o\"></i>",
+			"icon_holiday_mountain": "<i class=\"fa fa-photo\"></i>",
+			"icon_holiday_town": "<i class=\"fa fa-suitcase\"></i>",
+			"icon_holiday_nature": "<i class=\"fa fa-tree\"></i>",
+			"icon_holiday_travel": "<i class=\"fa fa-road\"></i>",
+			"icon_holiday_sun": "<i class=\"fa fa-home\"></i>",
+			"icon_holiday_beach": "<i class=\"fa fa-sun-o\"></i>",
+			"icon_holiday_tree": "<i class=\"fa fa-pagelines\"></i>",
+			"icon_holiday_car": "<i class=\"fa fa-car\"></i>",
+			"icon_holiday_animals": "<i class=\"fa fa-camera-retro\"></i>",
+			"image_folder_name": "assets/images_optimized/",
+			"data_prefix_pictureload": "data-"
+		},
+		{
 			"_comment": "delivers html as chunks (chunked encoding)",
 			"name": "optimized_chunked_encoding.php",
 			"chunked_encoding_block":"if (ob_get_level() == 0) ob_start();\n\t\tob_flush();\n\t\tflush();",
@@ -114,7 +168,7 @@
 			"_comment": "just images shown above the fold get loaded before window.onload",
 			"name": "optimized_pictureload.php",
 			"javascripts_end_body":"<script src=\"assets-cache-and-compression-disabled/js/postPictureLoad.js\"></script>",
-			"data_prefix_pictureload": "data-",
+			"data_prefix_pictureload": "data-"
 		},
 		{
 			"_comment": "css sprite replaces multiple icons",
@@ -158,7 +212,7 @@
 		{
 			"_comment": "javascripts get loaded at the end of the body",
 			"name": "optimized_javascripts_end_of_body.php",
-			"javascripts_end_body":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-and-compression-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/homepage.js\"></script>",
+			"javascripts_end_body":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-and-compression-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/homepage.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/js/heavy_lifting.js\"></script>",
 			"javascripts_head":"",
 		},
 		{
@@ -177,7 +231,7 @@
 			"name": "optimized_caching_headers.php",
 			"js_folder":"assets-compression-disabled/js",
 			"css_folder":"assets-compression-disabled/css",
-			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-compression-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-compression-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-compression-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-compression-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-compression-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-compression-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-compression-disabled/js/homepage.js\"></script>",
+			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-compression-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-compression-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-compression-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-compression-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-compression-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-compression-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-compression-disabled/js/homepage.js\"></script>\n\t<script src=\"assets-compression-disabled/js/heavy_lifting.js\"></script>",
 			"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets-compression-disabled/css/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-compression-disabled/css/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-compression-disabled/css/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets-compression-disabled/css/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets-compression-disabled/css/main.css\" rel=\"stylesheet\">",
 			"img_small_bars": "<img src=\"assets-compression-disabled/images/icons/bars.png\" />",
 			"img_small_chevron_left": "<img src=\"assets-compression-disabled/images/icons/chevron-left.png\" />",
@@ -201,7 +255,7 @@
 			"name": "optimized_compression_enabled.php",
 			"js_folder":"assets-cache-disabled/js",
 			"css_folder":"assets-cache-disabled/css",
-			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-cache-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-cache-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-disabled/js/homepage.js\"></script>",
+			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-disabled/js/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-disabled/js/jquery-ui.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-disabled/js/bootstrap.js\"></script>\n\t<script src=\"assets-cache-disabled/js/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-disabled/js/shuffle.js\"></script>\n\t<script src=\"assets-cache-disabled/js/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-disabled/js/homepage.js\"></script>\n\t<script src=\"assets-cache-disabled/js/heavy_lifting.js\"></script>",
 			"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets-cache-disabled/css/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-disabled/css/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-disabled/css/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets-cache-disabled/css/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets-cache-disabled/css/main.css\" rel=\"stylesheet\">",
 			"img_small_bars": "<img src=\"assets-cache-disabled/images/icons/bars.png\" />",
 			"img_small_chevron_left": "<img src=\"assets-cache-disabled/images/icons/chevron-left.png\" />",

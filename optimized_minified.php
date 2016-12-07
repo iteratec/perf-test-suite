@@ -68,6 +68,9 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Optimizations <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                         <li>
+                            <a  href="index_broken.php">Redirect and wrong image Url</a>
+                        </li>
+                        <li>
                             <a  href="optimized_chunked_encoding.php">Chunked encodig</a>
                         </li>
                         <li>
@@ -96,6 +99,9 @@
                         </li>
                         <li>
                             <a  href="optimized_rwd_avoid_loading_hidden_images.php">[RWD] Avoid loading hidden images</a>
+                        </li>
+                        <li>
+                            <a  href="optimized_all.php">All optimizations</a>
                         </li>
                         <!-- we should add an about page
                         <li>

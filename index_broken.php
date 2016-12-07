@@ -10,8 +10,16 @@
 
     <title>perf-test-suite</title>
 
-    <%= stylesheets %>
-    <%= sprites_stylesheets %>
+    <!-- Bootstrap Core CSS -->
+	<link href="assets-old-path/css/bootstrap.css" rel="stylesheet">
+	<!-- Jquery Magnific popup css -->
+	<link rel="stylesheet" type="text/css" href="assets-old-path/css/magnific-popup.css">
+	<!-- icons -->
+	<link rel="stylesheet" type="text/css" href="assets-old-path/css/font-awesome.css">
+	<!-- Custom CSS -->
+	<link href="assets-old-path/css/header.css" rel="stylesheet">
+	<link href="assets-old-path/css/main.css" rel="stylesheet">
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,16 +28,26 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <%= javascripts_head %>
+    <!-- jQuery Version 1.11.0 -->
+	<script src="assets-old-path/js/jquery-1.11.0.js"></script>
+	<script src="assets-old-path/js/jquery-ui.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="assets-old-path/js/bootstrap.js"></script>
+	<script src="assets-old-path/js/jquery.magnific-popup.js"></script>
+	<script src="assets-old-path/js/shuffle.js"></script>
+	<script src="assets-old-path/js/jquery.shapeshift.js"></script>
+	<script src="assets-old-path/js/homepage.js"></script>
+	<script src="assets-old-path/js/heavy_lifting.js"></script>
 
 </head>
 
 <body onload="RumReporter.sendBeacon({time: performance.now()});">
 
     <?php
-        <%= chunked_encoding_block %>
+        
         //simulate server side processing time
-        <%= sleep_block %>
+        $sleep = (isset($_GET["sleep"]) ? $_GET["sleep"] : 0);
+		if($sleep && ctype_digit(strval($sleep))) sleep($sleep);
     ?>
 
     <!-- Navigation -->
@@ -39,7 +57,7 @@
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <%= img_small_bars %>
+                    <img src="assets-old-path/images/icons/bars.png" />
                 </button>
 
                 <a href="index.php" class="navbar-brand">perf-test-suite</a>
@@ -51,40 +69,40 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Optimizations <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a <%= out << (name.equals('index_broken.php') ? "class=\"selected\"" : "");return "" %> href="index_broken.php">Redirect and wrong image Url</a>
+                            <a class="selected" href="index_broken.php">Redirect and wrong image Url</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_chunked_encoding.php') ? "class=\"selected\"" : "");return "" %> href="optimized_chunked_encoding.php">Chunked encodig</a>
+                            <a  href="optimized_chunked_encoding.php">Chunked encodig</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_css_sprites.php') ? "class=\"selected\"" : "");return "" %> href="optimized_css_sprites.php">CSS Sprites</a>
+                            <a  href="optimized_css_sprites.php">CSS Sprites</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_font_awesome.php') ? "class=\"selected\"" : "");return "" %> href="optimized_font_awesome.php">Font Awesome</a>
+                            <a  href="optimized_font_awesome.php">Font Awesome</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_minified.php') ? "class=\"selected\"" : "");return "" %> href="optimized_minified.php">Minified Resources</a>
+                            <a  href="optimized_minified.php">Minified Resources</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_pictureload.php') ? "class=\"selected\"" : "");return "" %> href="optimized_pictureload.php">Postload images</a>
+                            <a  href="optimized_pictureload.php">Postload images</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_javascripts_end_of_body.php') ? "class=\"selected\"" : "");return "" %> href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
+                            <a  href="optimized_javascripts_end_of_body.php">Javascripts end of body</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_images.php') ? "class=\"selected\"" : "");return "" %> href="optimized_images.php">Optimized images</a>
+                            <a  href="optimized_images.php">Optimized images</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_caching_headers.php') ? "class=\"selected\"" : "");return "" %> href="optimized_caching_headers.php">Sensible caching headers</a>
+                            <a  href="optimized_caching_headers.php">Sensible caching headers</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_compression_enabled.php') ? "class=\"selected\"" : "");return "" %> href="optimized_compression_enabled.php">Compression enabled</a>
+                            <a  href="optimized_compression_enabled.php">Compression enabled</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_rwd_avoid_loading_hidden_images.php') ? "class=\"selected\"" : "");return "" %> href="optimized_rwd_avoid_loading_hidden_images.php">[RWD] Avoid loading hidden images</a>
+                            <a  href="optimized_rwd_avoid_loading_hidden_images.php">[RWD] Avoid loading hidden images</a>
                         </li>
                         <li>
-                            <a <%= out << (name.equals('optimized_all.php') ? "class=\"selected\"" : "");return "" %> href="optimized_all.php">All optimizations</a>
+                            <a  href="optimized_all.php">All optimizations</a>
                         </li>
                         <!-- we should add an about page
                         <li>
@@ -94,7 +112,7 @@
                       </ul>
                     </li>
               </ul>
-              <p class="navbar-text"><%= name %></p>
+              <p class="navbar-text">index_broken.php</p>
             </nav>
             <!-- /.navbar-collapse -->
         </div>
@@ -120,26 +138,26 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="slide-image" src="<%= image_folder_name %>country-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets-old-path/images/country-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" <%= data_prefix_pictureload %>src="<%= image_folder_name %>boat-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets-old-path/images/boat-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" <%= data_prefix_pictureload %>src="<%= image_folder_name %>snow-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets-old-path/images/snow-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" <%= data_prefix_pictureload %>src="<%= image_folder_name %>beach<%= image_toggle %>-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets-old-path/images/beach_old_path-1170x400.jpeg" alt="">
                             </div>
                             <div class="item">
-                                <img class="slide-image" <%= data_prefix_pictureload %>src="<%= image_folder_name %>glass-building-1170x400.jpeg" alt="">
+                                <img class="slide-image" src="assets-old-path/images/glass-building-1170x400.jpeg" alt="">
                             </div>
                         </div>
                         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <%= img_small_chevron_left %>
+                            <img src="assets-old-path/images/icons/chevron-left.png" />
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <%= img_small_chevron_right %>
+                            <img src="assets-old-path/images/icons/chevron-right.png" />
                         </a>
                     </div>
                 </div>
@@ -151,13 +169,13 @@
             <div class="col-md-9 box-center">
                 <blockquote>
                     <div class="col-sm-3 text-center">
-                        <img class="img-circle" style="width: 100px;height:100px;" src="<%= image_folder_name %>person_3.png">
+                        <img class="img-circle" style="width: 100px;height:100px;" src="assets-old-path/images/person_3.png">
                     </div>
                     <div class="col-sm-9">
                         <p>
-                            <%= img_small_quote_left %>
+                            <img src="assets-old-path/images/icons/quote-left.png" />
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
-                            <%= img_small_quote_right %>
+                            <img src="assets-old-path/images/icons/quote-right.png" />
                         </p>
                         <small>Someone famous</small>
                     </div>
@@ -170,35 +188,39 @@
                 <h3><small>Recent Bookings</small></h3>
                 <ul class="thumbnails">
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>rila.jpg">
+                        <div class="thumbnail" href="assets-old-path/images/rila.jpg">
                             <a href="javascript:;">
-                                <%= image_rila %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Rila mountain, Bulgaria" src="assets-old-path/images/rila_small.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_mountain %> Rila mountain, Bulgaria
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-mountain.png" /> Rila mountain, Bulgaria
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
                                 <p>
-                                    <%= icon_block %>
+                                    <img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
                                 <p>22 reviews</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>varna_panorama.jpeg">
+                        <div class="thumbnail" href="assets-old-path/images/varna_panorama.jpeg">
                             <a href="javascript:;">
-                                <%= image_varna %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Varna" src="assets-old-path/images/varna.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_town %>
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-town.png" />
 										Varna, Bulgaria
 									</a>
 								</h4>
@@ -206,133 +228,161 @@
                             </div>
                             <div class="ratings">
                                 <p>
-									<%= icon_block %>
+									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
                                 <p>28 reviews</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>tsarevets.jpg">
+                        <div class="thumbnail" href="assets-old-path/images/tsarevets.jpg">
                             <a href="javascript:;">
-                                <%= image_tzarevets %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Tzarevets, Veliko Tarnvo, Bulgaria" src="assets-old-path/images/tsarevets_small.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_nature %> Tzarevets, Veliko Tarnovo, Bulgaria
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-nature.png" /> Tzarevets, Veliko Tarnovo, Bulgaria
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
                                 <p>
-									<%= icon_block %>
+									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
 								<p>28 reviews</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>london.jpeg">
+                        <div class="thumbnail" href="assets-old-path/images/london.jpeg">
                             <a href="javascript:;">
-                                <%= image_london %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="London" src="assets-old-path/images/london.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_travel %> London
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-travel.png" /> London
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
                                 <p>
-									<%= icon_block %>
+									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
 								<p>15 reviews</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>cibeles.jpg">
+                        <div class="thumbnail" href="assets-old-path/images/cibeles.jpg">
                             <a href="javascript:;">
-                                <%= image_cibeles %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cibeles, Madrid, Spain" src="assets-old-path/images/cibeles_small_2.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_sun %> Cibeles, Madrid, Spain
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-sun.png" /> Cibeles, Madrid, Spain
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
                                 <p>
-									<%= icon_block %>
+									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
 								<p>12 reviews</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>recife.jpg">
+                        <div class="thumbnail" href="assets-old-path/images/recife.jpg">
                             <a href="javascript:;">
-                                <%= image_recife %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Recife, Brasil" src="assets-old-path/images/recife_small_1.jpg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_beach %> Recife, Brasil
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-beach.png" /> Recife, Brasil
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
                                 <p>
-									<%= icon_block %>
+									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
 								<p>6 reviews</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>tree.jpeg">
+                        <div class="thumbnail" href="assets-old-path/images/tree.jpeg">
                             <a href="javascript:;">
-                                <%= image_asia %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Asia" src="assets-old-path/images/tree.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_tree %> Asia
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-tree.png" /> Asia
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
                                 <p>
-									<%= icon_block %>
+									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
 								<p>31 reviews</p>
                             </div>
                         </div>
                     </li>
                     <li class="col-md-3">
-                        <div class="thumbnail" href="<%= image_folder_name %>san-fran.jpeg">
+                        <div class="thumbnail" href="assets-old-path/images/san-fran.jpeg">
                             <a href="javascript:;">
-                                <%= image_sanfran %>
+                                <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="San Francisco" src="assets-old-path/images/san-fran.jpeg">
                             </a>
                             <div class="caption">
                                 <h4>
 									<a href="javascript:;">
-										<%= icon_holiday_car %> San Francisco
+										<img class="icon-small" src="assets-old-path/images/icons/holiday-car.png" /> San Francisco
 									</a>
 								</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                             </div>
                             <div class="ratings">
                                 <p>
-									<%= icon_block %>
+									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                 </p>
 								<p>0 reviews</p>
                             </div>
@@ -340,420 +390,500 @@
                     </li>
                     <div class="only-visible-on-desktop">
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>cheetah.jpeg">
+                            <div class="thumbnail" href="assets-old-path/images/cheetah.jpeg">
                                 <a href="javascript:;">
-                                    <%= image_africa %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cheetah" src="assets-old-path/images/cheetah.jpeg">
                                 </a>
                                 <div class="caption">
                                     <h4>
     									<a href="javascript:;">
-    										<%= icon_holiday_nature %> Africa
+    										<img class="icon-small" src="assets-old-path/images/icons/holiday-nature.png" /> Africa
     									</a>
     								</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>louvre.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/louvre.jpg">
                                 <a href="javascript:;">
-                                    <%= image_louvre %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Louvre" src="assets-old-path/images/louvre.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
     									<a href="javascript:;">
-    										<%= icon_holiday_animals %> Louvre, Paris, France
+    										<img class="icon-small" src="assets-old-path/images/icons/holiday-animals.png" /> Louvre, Paris, France
     									</a>
     								</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>28 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>cityview.jpeg">
+                            <div class="thumbnail" href="assets-old-path/images/cityview.jpeg">
                                 <a href="javascript:;">
-                                    <%= image_cityview %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cityview" src="assets-old-path/images/cityview.jpeg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_travel %> Cityview
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-travel.png" /> Cityview
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>15 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>finland.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/finland.jpg">
                                 <a href="javascript:;">
-                                    <%= image_finland %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Finland" src="assets-old-path/images/finland_small.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_sun %> Finland
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-sun.png" /> Finland
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>12 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>flying-duck.jpeg">
+                            <div class="thumbnail" href="assets-old-path/images/flying-duck.jpeg">
                                 <a href="javascript:;">
-                                    <%= image_duck %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Flying duck" src="assets-old-path/images/flying-duck.jpeg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_beach %> Flying duck
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-beach.png" /> Flying duck
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>6 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>art-gallery.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/art-gallery.jpg">
                                 <a href="javascript:;">
-                                    <%= image_artgallery %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Art gallery" src="assets-old-path/images/art-gallery.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_tree %> Art gallery
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-tree.png" /> Art gallery
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>31 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>beginning-of-life.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/beginning-of-life.jpg">
                                 <a href="javascript:;">
-                                    <%= image_beginningoflife %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Beginning of life" src="assets-old-path/images/beginning-of-life.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_car %> Beginning of life
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-car.png" /> Beginning of life
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>cherry-blossom.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/cherry-blossom.jpg">
                                 <a href="javascript:;">
-                                    <%= image_cherryblossom %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Cherry blossom" src="assets-old-path/images/cherry-blossom.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_nature %> Cherry blossom
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-nature.png" /> Cherry blossom
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>coffee-central.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/coffee-central.jpg">
                                 <a href="javascript:;">
-                                    <%= image_coffecentral %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Coffee central" src="assets-old-path/images/coffee-central.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_beach %> Coffee
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-beach.png" /> Coffee
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>6 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>frankfurt-waters.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/frankfurt-waters.jpg">
                                 <a href="javascript:;">
-                                    <%= image_frankfurtwaters %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Frankfurt waters" src="assets-old-path/images/frankfurt-waters.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_tree %> Frankfurt waters
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-tree.png" /> Frankfurt waters
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>31 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>man-made-skies.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/man-made-skies.jpg">
                                 <a href="javascript:;">
-                                    <%= image_manmadeskies %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Man made skies" src="assets-old-path/images/man-made-skies.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_car %> Man made skies
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-car.png" /> Man made skies
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>old-love.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/old-love.jpg">
                                 <a href="javascript:;">
-                                    <%= image_oldlove %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Old love" src="assets-old-path/images/old-love.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_nature %> Old love
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-nature.png" /> Old love
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>ungodly-skies.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/ungodly-skies.jpg">
                                 <a href="javascript:;">
-                                    <%= image_ungodlyskies %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Ungodly skies" src="assets-old-path/images/ungodly-skies.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_beach %> Ungodly skies
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-beach.png" /> Ungodly skies
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>6 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>windy-day.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/windy-day.jpg">
                                 <a href="javascript:;">
-                                    <%= image_windyday %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Windy day" src="assets-old-path/images/windy-day.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_tree %> Windy day
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-tree.png" /> Windy day
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>31 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>sky-and-building.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/sky-and-building.jpg">
                                 <a href="javascript:;">
-                                    <%= image_skyandbuilding %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Sky and building" src="assets-old-path/images/sky-and-building.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_car %> Sky and building
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-car.png" /> Sky and building
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>trombone_player.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/trombone_player.jpg">
                                 <a href="javascript:;">
-                                    <%= image_tromboneplayer %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Trombone_player" src="assets-old-path/images/trombone_player.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_nature %> Trombone player
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-nature.png" /> Trombone player
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
     					</li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>wasp.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/wasp.jpg">
                                 <a href="javascript:;">
-                                    <%= image_wasp %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Wasp" src="assets-old-path/images/wasp.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_beach %> Wasp
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-beach.png" /> Wasp
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>6 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>catcher-in-the-rye.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/catcher-in-the-rye.jpg">
                                 <a href="javascript:;">
-                                    <%= image_catcherintherye %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Catcher in the rye" src="assets-old-path/images/catcher-in-the-rye.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_tree %> Catcher in the rye
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-tree.png" /> Catcher in the rye
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>31 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>old-caddy.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/old-caddy.jpg">
                                 <a href="javascript:;">
-                                    <%= image_oldcaddy %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="Old caddy" src="assets-old-path/images/old-caddy.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_car %> Old Caddy
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-car.png" /> Old Caddy
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-md-3">
-                            <div class="thumbnail" href="<%= image_folder_name %>oneway.jpg">
+                            <div class="thumbnail" href="assets-old-path/images/oneway.jpg">
                                 <a href="javascript:;">
-                                    <%= image_oneway %>
+                                    <img class="attachment-portfolio-full wp-post-image" width="600" height="400" alt="One way only" src="assets-old-path/images/oneway.jpg">
                                 </a>
                                 <div class="caption">
                                     <h4>
                                         <a href="javascript:;">
-                                            <%= icon_holiday_nature %> One way only
+                                            <img class="icon-small" src="assets-old-path/images/icons/holiday-nature.png" /> One way only
                                         </a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis, lorem vitae volutpat luctus, lectus nisl suscipit sem, nec varius magna neque in dui. Nullam non leo id turpis hendrerit...</p>
                                 </div>
                                 <div class="ratings">
                                     <p>
-    									<%= icon_block %>
+    									<img class="icon-small" src="assets-old-path/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star-filled.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
+									<img class="icon-small" src="assets/images/icons/star.png" />
                                     </p>
     								<p>0 reviews</p>
                                 </div>
@@ -786,7 +916,7 @@
     </div>
     <!-- /.container -->
 
-    <%= javascripts_end_body %>
+    
 
      <script type="text/javascript" src="assets/js/sendBeacon.js"></script>
 
