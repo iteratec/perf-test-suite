@@ -37,7 +37,7 @@
 	<script src="assets-cache-and-compression-disabled/js/shuffle.js"></script>
 	<script src="assets-cache-and-compression-disabled/js/jquery.shapeshift.js"></script>
 	<script src="assets-cache-and-compression-disabled/js/homepage.js"></script>
-	<script src="assets-old-path/js/heavy_lifting.js"></script>
+	<script src="assets-cache-and-compression-disabled/js/heavy_lifting.js"></script>
 
 </head>
 
@@ -962,7 +962,7 @@
 	<script src="assets-cache-and-compression-disabled/js/shuffle.js"></script>
 	<script src="assets-cache-and-compression-disabled/js/jquery.shapeshift.js"></script>
 	<script src="assets-cache-and-compression-disabled/js/homepage.js"></script>
-	<script src="assets-old-path/js/heavy_lifting.js"></script>
+	<script src="assets-cache-and-compression-disabled/js/heavy_lifting.js"></script>
 
 </head>
 
