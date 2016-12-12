@@ -37,6 +37,7 @@
 	<script src="assets-cache-and-compression-disabled/jsMinified/shuffle.js"></script>
 	<script src="assets-cache-and-compression-disabled/jsMinified/jquery.shapeshift.js"></script>
 	<script src="assets-cache-and-compression-disabled/jsMinified/homepage.js"></script>
+	<script src="assets-cache-and-compression-disabled/jsMinified/heavy_lifting.js"></script>
 
 </head>
 

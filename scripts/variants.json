@@ -161,7 +161,7 @@
 			"name": "optimized_minified.php",
 			"css_folder":"assets-cache-and-compression-disabled/cssMinified",
 			"js_folder":"assets-cache-and-compression-disabled/jsMinified",
-			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery-ui.min.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/bootstrap.min.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/shuffle.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/homepage.js\"></script>",
+			"javascripts_head":"<!-- jQuery Version 1.11.0 -->\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery-1.11.0.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery-ui.min.js\"></script>\n\t<!-- Bootstrap Core JavaScript -->\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/bootstrap.min.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery.magnific-popup.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/shuffle.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/jquery.shapeshift.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/homepage.js\"></script>\n\t<script src=\"assets-cache-and-compression-disabled/jsMinified/heavy_lifting.js\"></script>",
 			"stylesheets":"<!-- Bootstrap Core CSS -->\n\t<link href=\"assets-cache-and-compression-disabled/cssMinified/bootstrap.css\" rel=\"stylesheet\">\n\t<!-- Jquery Magnific popup css -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-and-compression-disabled/cssMinified/magnific-popup.css\">\n\t<!-- icons -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"assets-cache-and-compression-disabled/cssMinified/font-awesome.css\">\n\t<!-- Custom CSS -->\n\t<link href=\"assets-cache-and-compression-disabled/cssMinified/header.css\" rel=\"stylesheet\">\n\t<link href=\"assets-cache-and-compression-disabled/cssMinified/main.css\" rel=\"stylesheet\">",
 		},
 		{
@@ -220,11 +220,6 @@
 			"name": "optimized_combined_javascript_css.php",
 			"stylesheets":"<link href=\"assets-cache-and-compression-disabled/css/public_all.css\" rel=\"stylesheet\">",
 			"javascripts_head":"<script src=\"assets-cache-and-compression-disabled/js/public_all.js\"></script>"
-		},
-		{
-			"_comment": "all jpegs are lossy compressed with 85% and afterwards optimized lossless via tools like https://imageoptim.com/ or http://trimage.org/",
-			"name": "optimized_images.php",
-			"image_folder_name": "assets-cache-and-compression-disabled/images_optimized/"
 		},
 		{
 			"_comment": "all static assets with sensible caching headers",
