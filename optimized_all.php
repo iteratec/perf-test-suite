@@ -910,16 +910,16 @@
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.0 -->
-	<script src="assets/js/jquery-1.11.0.js"></script>
-	<script src="assets/js/jquery-ui.js"></script>
+	<script src="assets/jsMinified/jquery-1.11.0.js"></script>
+	<script src="assets/jsMinified/jquery-ui.js"></script>
 	<!-- Bootstrap Core JavaScript -->
-	<script src="assets/js/bootstrap.js"></script>
-	<script src="assets/js/jquery.magnific-popup.js"></script>
-	<script src="assets/js/shuffle.js"></script>
-	<script src="assets/js/jquery.shapeshift.js"></script>
-	<script src="assets/js/homepage.js"></script>
-	<script src="assets/js/heavy_lifting_window_load.js"></script>
-	<script src="assets/js/postPictureLoad.js"></script>
+	<script src="assets/jsMinified/bootstrap.js"></script>
+	<script src="assets/jsMinified/jquery.magnific-popup.js"></script>
+	<script src="assets/jsMinified/shuffle.js"></script>
+	<script src="assets/jsMinified/jquery.shapeshift.js"></script>
+	<script src="assets/jsMinified/homepage.js"></script>
+	<script src="assets/jsMinified/heavy_lifting_window_load.js"></script>
+	<script src="assets/jsMinified/postPictureLoad.js"></script>
 
      <script type="text/javascript" src="assets/js/sendBeacon.js"></script>
 
